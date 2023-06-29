@@ -1,11 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://assets/images/noahviewPLACEHOLDER.png" type="Texture" id=1]
 [ext_resource path="res://scripts/noahpanningview.gd" type="Script" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-[sub_resource type="RectangleShape2D" id=2]
 
 [node name="Night1" type="Node2D"]
 
@@ -13,38 +9,3 @@
 position = Vector2( 960, 540 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
-
-[node name="left_edge" type="Area2D" parent="noahpanningview"]
-position = Vector2( -1330, 0 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="noahpanningview/left_edge"]
-scale = Vector2( 5, 54 )
-shape = SubResource( 1 )
-
-[node name="right_edge" type="Area2D" parent="noahpanningview"]
-position = Vector2( 1330, 0 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="noahpanningview/right_edge"]
-scale = Vector2( 5, 54 )
-shape = SubResource( 1 )
-
-[node name="static_areas" type="Node2D" parent="."]
-
-[node name="left_screen_edge" type="Area2D" parent="static_areas"]
-position = Vector2( -10, 540 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="static_areas/left_screen_edge"]
-scale = Vector2( 1, 54 )
-shape = SubResource( 2 )
-
-[node name="right_screen_edge" type="Area2D" parent="static_areas"]
-position = Vector2( 1930, 540 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="static_areas/right_screen_edge"]
-scale = Vector2( 1, 54 )
-shape = SubResource( 2 )
-
-[connection signal="area_entered" from="noahpanningview/left_edge" to="noahpanningview" method="_on_left_edge_area_entered"]
-[connection signal="area_exited" from="noahpanningview/left_edge" to="noahpanningview" method="_on_left_edge_area_exited"]
-[connection signal="area_entered" from="noahpanningview/right_edge" to="noahpanningview" method="_on_right_edge_area_entered"]
-[connection signal="area_exited" from="noahpanningview/right_edge" to="noahpanningview" method="_on_right_edge_area_exited"]
