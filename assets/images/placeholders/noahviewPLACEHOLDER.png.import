@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/realpfp.jpg-44cdf6aaa9331b44218cb5fa360eccfb.stex"
+path="res://.import/noahviewPLACEHOLDER.png-96693920bc83cf554956d90e5aa39e45.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/realpfp.jpg"
-dest_files=[ "res://.import/realpfp.jpg-44cdf6aaa9331b44218cb5fa360eccfb.stex" ]
+source_file="res://assets/images/placeholders/noahviewPLACEHOLDER.png"
+dest_files=[ "res://.import/noahviewPLACEHOLDER.png-96693920bc83cf554956d90e5aa39e45.stex" ]
 
 [params]
 
