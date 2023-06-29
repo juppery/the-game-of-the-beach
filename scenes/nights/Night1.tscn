@@ -7,7 +7,7 @@
 
 [sub_resource type="RectangleShape2D" id=2]
 
-[node name="Node2D" type="Node2D"]
+[node name="Night1" type="Node2D"]
 
 [node name="noahpanningview" type="Sprite" parent="."]
 position = Vector2( 960, 540 )
@@ -31,17 +31,20 @@ shape = SubResource( 1 )
 [node name="static_areas" type="Node2D" parent="."]
 
 [node name="left_screen_edge" type="Area2D" parent="static_areas"]
-position = Vector2( -2.5, 540 )
+position = Vector2( -10, 540 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="static_areas/left_screen_edge"]
-scale = Vector2( 0.25, 54 )
+scale = Vector2( 1, 54 )
 shape = SubResource( 2 )
 
-[node name="left_screen_edge2" type="Area2D" parent="static_areas"]
-position = Vector2( 1922.5, 540 )
+[node name="right_screen_edge" type="Area2D" parent="static_areas"]
+position = Vector2( 1930, 540 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="static_areas/left_screen_edge2"]
-scale = Vector2( 0.25, 54 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="static_areas/right_screen_edge"]
+scale = Vector2( 1, 54 )
 shape = SubResource( 2 )
 
-[connection signal="mouse_entered" from="noahpanningview/right_edge" to="noahpanningview" method="_on_right_edge_mouse_entered"]
+[connection signal="area_entered" from="noahpanningview/left_edge" to="noahpanningview" method="_on_left_edge_area_entered"]
+[connection signal="area_exited" from="noahpanningview/left_edge" to="noahpanningview" method="_on_left_edge_area_exited"]
+[connection signal="area_entered" from="noahpanningview/right_edge" to="noahpanningview" method="_on_right_edge_area_entered"]
+[connection signal="area_exited" from="noahpanningview/right_edge" to="noahpanningview" method="_on_right_edge_area_exited"]
