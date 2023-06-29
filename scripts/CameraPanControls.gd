@@ -15,9 +15,11 @@ func _ready():
 
 # FIRST OFF, delete those stupid boxes. then read below:
 
-#func _process(delta):
-#	get the x position of the mouse, relative to the left and right sides of the windows, call it mouse.x:
-#	if the x position is below a certain threshold:
+func _process(delta):
+	var mouse_position = get_global_mouse_position()
+	var mouse_x_pos = mouse_position.x
+	print(mouse_x_pos - 300)
+	var x_movement_left = 10
 #		#pan the camera left(pan the picture right)
 #		Move Picture Right mouse.x
 #	if leftedge.Picture touching leftedge.Window:
