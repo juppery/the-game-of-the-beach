@@ -17,9 +17,10 @@ func _ready():
 
 func _process(delta):
 	var mouse_position = get_global_mouse_position()
-	var mouse_x_pos = mouse_position.x
-	print(mouse_x_pos - 300)
-	var x_movement_left = 10
+	var mouse_x_pos = mouse_position.x - 300
+	print(mouse_x_pos)
+	if mouse_x_pos <= 0:
+		pass
 #		#pan the camera left(pan the picture right)
 #		Move Picture Right mouse.x
 #	if leftedge.Picture touching leftedge.Window:
