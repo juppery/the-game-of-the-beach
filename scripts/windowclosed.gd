@@ -16,8 +16,8 @@ func _ready():
 
 
 func _on_close_window_button_button_down():
-	window_closed_sprite.modulate.a = 255
+	pass
 
 
 func _on_close_window_button_button_up():
-	window_closed_sprite.modulate.a = 0
+	pass

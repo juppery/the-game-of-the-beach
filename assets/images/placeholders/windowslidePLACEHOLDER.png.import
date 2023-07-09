@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/windowclosedPLACEHOLDER.png-3c142b7e9a25384e729405dbc58612b4.stex"
+path="res://.import/windowslidePLACEHOLDER.png-c94e0feda5cf9a85ceb8c3a3f8e17e9e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/placeholders/windowclosedPLACEHOLDER.png"
-dest_files=[ "res://.import/windowclosedPLACEHOLDER.png-3c142b7e9a25384e729405dbc58612b4.stex" ]
+source_file="res://assets/images/placeholders/windowslidePLACEHOLDER.png"
+dest_files=[ "res://.import/windowslidePLACEHOLDER.png-c94e0feda5cf9a85ceb8c3a3f8e17e9e.stex" ]
 
 [params]
 
