@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/images/placeholders/noahviewPLACEHOLDER.png" type="Texture" id=1]
 [ext_resource path="res://scripts/noahpanningview.gd" type="Script" id=2]
 [ext_resource path="res://assets/images/placeholders/windowslidePLACEHOLDER.png" type="Texture" id=3]
 [ext_resource path="res://scripts/windowclosed.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Cameras.tscn" type="PackedScene" id=5]
 
 [node name="Night1" type="Node2D"]
 
@@ -22,6 +23,8 @@ margin_left = -1193.0
 margin_top = -371.0
 margin_right = -693.0
 margin_bottom = 229.0
+
+[node name="Cameras" parent="." instance=ExtResource( 5 )]
 
 [connection signal="button_down" from="noahpanningview/close_window_button" to="noahpanningview/window_closed_sprite" method="_on_close_window_button_button_down"]
 [connection signal="button_up" from="noahpanningview/close_window_button" to="noahpanningview/window_closed_sprite" method="_on_close_window_button_button_up"]
