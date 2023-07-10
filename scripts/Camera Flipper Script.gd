@@ -10,7 +10,8 @@ func _ready():
 func _process(delta):
 	pass
 # AEFIENIUEWFIEWUFN
+#iugwneijngiwunegijnweigwenig BLORBO
 
 
 func _on_Camera_Flipper_mouse_entered():
-	pass # Replace with function body.
+	print("big piner")
