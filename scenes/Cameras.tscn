@@ -14,4 +14,6 @@ script = ExtResource( 1 )
 scale = Vector2( 60, 5 )
 shape = SubResource( 1 )
 
+[node name="Camera Images" type="Node2D" parent="."]
+
 [connection signal="mouse_entered" from="Camera Flipper" to="Camera Flipper" method="_on_Camera_Flipper_mouse_entered"]
