@@ -1,8 +1,8 @@
 extends Sprite
 
 #makes it so i can refer to this sprite as its name
-onready var window_closed_sprite = get_node(".")
-
+#onready var window_closed_sprite = get_node(".")
+export var slideSpeed = 300
 
 
 
@@ -10,9 +10,9 @@ var windowOpen = true
 #makes a variable that i can change and then later convert to the position of the sprite
 var velocity = Vector2.ZERO
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,10 +21,10 @@ func _process(delta):
 	
 	#refer to line 7, or whichever talsk about 238
 	if windowOpen == true and position.y != 0:
-		velocity.y -= 50*delta
+		velocity.y -= slideSpeed*delta
 	
 	if windowOpen != true and position.y != 238:
-		velocity.y += 50*delta
+		velocity.y += slideSpeed*delta
 		
 	if position.y == 0 and velocity.y < 0:
 		velocity.y = 0
