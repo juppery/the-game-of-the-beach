@@ -25,3 +25,4 @@ margin_bottom = 229.0
 
 [connection signal="button_down" from="noahpanningview/close_window_button" to="noahpanningview/window_closed_sprite" method="_on_close_window_button_button_down"]
 [connection signal="button_up" from="noahpanningview/close_window_button" to="noahpanningview/window_closed_sprite" method="_on_close_window_button_button_up"]
+[connection signal="mouse_exited" from="noahpanningview/close_window_button" to="noahpanningview/window_closed_sprite" method="_on_close_window_button_mouse_exited"]
