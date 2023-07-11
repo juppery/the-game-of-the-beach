@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Camera Flipper Script.gd" type="Script" id=1]
+[ext_resource path="res://scenes/gazebo.jpg" type="Texture" id=2]
+[ext_resource path="res://scripts/Camera pan.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -15,5 +17,95 @@ scale = Vector2( 60, 5 )
 shape = SubResource( 1 )
 
 [node name="Camera Images" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="PLACEHOLDER IMAGES AHAHHAHH" type="Node2D" parent="Camera Images"]
+
+[node name="gazebo" type="Sprite" parent="Camera Images/PLACEHOLDER IMAGES AHAHHAHH"]
+position = Vector2( 960, 540 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Schoolroom" type="Node2D" parent="Camera Images"]
+
+[node name="PanView" type="Sprite" parent="Camera Images/Schoolroom"]
+
+[node name="Ben" type="Sprite" parent="Camera Images/Schoolroom"]
+
+[node name="Danny" type="Sprite" parent="Camera Images/Schoolroom"]
+
+[node name="Backroom" type="Node2D" parent="Camera Images"]
+
+[node name="PanView" type="Sprite" parent="Camera Images/Backroom"]
+
+[node name="Ben" type="Sprite" parent="Camera Images/Backroom"]
+
+[node name="Danny" type="Sprite" parent="Camera Images/Backroom"]
+
+[node name="Sams Room" type="Node2D" parent="Camera Images"]
+
+[node name="PanView" type="Sprite" parent="Camera Images/Sams Room"]
+
+[node name="Ben" type="Sprite" parent="Camera Images/Sams Room"]
+
+[node name="Danny" type="Sprite" parent="Camera Images/Sams Room"]
+
+[node name="Kitchen" type="Node2D" parent="Camera Images"]
+
+[node name="PanView" type="Sprite" parent="Camera Images/Kitchen"]
+
+[node name="Ben" type="Sprite" parent="Camera Images/Kitchen"]
+
+[node name="Danny" type="Sprite" parent="Camera Images/Kitchen"]
+
+[node name="Nik\?animated\?" type="Sprite" parent="Camera Images/Kitchen"]
+
+[node name="Parents Room" type="Node2D" parent="Camera Images"]
+
+[node name="no view lol" type="Sprite" parent="Camera Images/Parents Room"]
+
+[node name="Patio" type="Node2D" parent="Camera Images"]
+
+[node name="PanView" type="Sprite" parent="Camera Images/Patio"]
+
+[node name="James" type="Sprite" parent="Camera Images/Patio"]
+
+[node name="To Downstairs" type="Node2D" parent="Camera Images"]
+
+[node name="View" type="Sprite" parent="Camera Images/To Downstairs"]
+
+[node name="Lucas" type="Node2D" parent="Camera Images/To Downstairs"]
+
+[node name="Jp" type="Node2D" parent="Camera Images/To Downstairs"]
+
+[node name="To Upstairs" type="Node2D" parent="Camera Images"]
+
+[node name="View" type="Sprite" parent="Camera Images/To Upstairs"]
+
+[node name="Ben" type="Sprite" parent="Camera Images/To Upstairs"]
+
+[node name="Danny" type="Sprite" parent="Camera Images/To Upstairs"]
+
+[node name="Bens Room" type="Node2D" parent="Camera Images"]
+
+[node name="View" type="Sprite" parent="Camera Images/Bens Room"]
+
+[node name="Ben" type="Sprite" parent="Camera Images/Bens Room"]
+
+[node name="Dannys Room" type="Node2D" parent="Camera Images"]
+
+[node name="View" type="Sprite" parent="Camera Images/Dannys Room"]
+
+[node name="Danny" type="Sprite" parent="Camera Images/Dannys Room"]
+
+[node name="\?\?\?Outside Window\?\?\?\?" type="Node2D" parent="Camera Images"]
+
+[node name="View\?or panview" type="Sprite" parent="Camera Images/\?\?\?Outside Window\?\?\?\?"]
+
+[node name="could be a gif" type="Sprite" parent="Camera Images/\?\?\?Outside Window\?\?\?\?"]
+
+[node name="of lucas running" type="Sprite" parent="Camera Images/\?\?\?Outside Window\?\?\?\?"]
+
+[node name="to the window" type="Sprite" parent="Camera Images/\?\?\?Outside Window\?\?\?\?"]
 
 [connection signal="mouse_entered" from="Camera Flipper" to="Camera Flipper" method="_on_Camera_Flipper_mouse_entered"]
