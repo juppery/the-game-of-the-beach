@@ -1,8 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scripts/Camera Flipper Script.gd" type="Script" id=1]
-[ext_resource path="res://scenes/gazebo.jpg" type="Texture" id=2]
-[ext_resource path="res://scripts/Camera pan.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -17,14 +15,6 @@ scale = Vector2( 60, 5 )
 shape = SubResource( 1 )
 
 [node name="Camera Images" type="Node2D" parent="."]
-script = ExtResource( 3 )
-
-[node name="PLACEHOLDER IMAGES AHAHHAHH" type="Node2D" parent="Camera Images"]
-
-[node name="gazebo" type="Sprite" parent="Camera Images/PLACEHOLDER IMAGES AHAHHAHH"]
-position = Vector2( 960, 540 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
 
 [node name="Schoolroom" type="Node2D" parent="Camera Images"]
 
