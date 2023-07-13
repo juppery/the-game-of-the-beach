@@ -3,16 +3,17 @@ extends Node2D
 onready var windowscript = get_node("noahpanningview/window_closed_sprite")
 onready var benLocation = "schoolroom"
 onready var dannyLocation = "schoolroom"
-
+onready var hour = 1
 
 func _process(delta):
-	pass
-	
+	print("danny's location is "+dannyLocation)
+	print("ben's location is "+benLocation)
 
 
 
 
-
+func _on_HourTimer_timeout():
+	pass # Replace with function body.
 
 
 
@@ -54,7 +55,8 @@ func _on_BenTimer_timeout():
 					benLocation = "door"
 			elif benLocation == "door":
 				if doorscript.doorOpen == true:  #i haven't made the door script or the door variable yet. that'll happen
-					signal JUMPSCARE PLAYER !!!! AHHHH!!! SCARY!! #play a gif and over the game
+					print("you lose stoobid")
+					#signal JUMPSCARE PLAYER !!!! AHHHH!!! SCARY!! #play a gif and over the game
 				elif doorscript.doorOpen == false:
 					benLocation = "schoolroom" #we can change this
 
@@ -91,3 +93,6 @@ func _on_DannyTimer_timeout():
 					signal JUMPSCARE PLAYER !!!! AHHHH!!! SCARY!! #play a gif and over the game
 				elif doorscript.doorOpen == false:
 					dannyLocation = "kitchen" #we can change this
+
+
+
