@@ -4,10 +4,10 @@ onready var windowscript = get_node("noahpanningview/window_closed_sprite")
 #onready var doorscript = getnode (node with the doorscript)
 
 onready var benLocation = "schoolroom"
-onready var benAgressionValue = 20
+onready var benAggressionValue = 0
 
 onready var dannyLocation = "schoolroom"
-onready var dannyAgressionValue = 20
+onready var dannyAggressionValue = 0
 
 onready var HourLabel = get_node("HourLabel")
 onready var hour = 0
@@ -25,15 +25,20 @@ func _on_HourTimer_timeout():
 		HourLabel.text = "1 AM"
 	if hour == 1:
 		HourLabel.text = "2 AM"
+		dannyAggressionValue += 1
 	if hour == 2:
 		HourLabel.text = "3 AM"
+		dannyAggressionValue += 1
+		benAggressionValue + 1
 	if hour == 3:
 		HourLabel.text = "4 AM"
+		dannyAggressionValue += 1
+		benAggressionValue += 1
 	if hour == 4:
 		HourLabel.text = "5 AM"
 	if hour == 5:
 		pass #PLAYER WINS!!! WOOOOOOOOOO!!!!!!! maybe figure out a way to save the nights won?
-
+	hour += 1
 
 
 
@@ -41,7 +46,7 @@ func _on_BenTimer_timeout():
 	
 	var twentySidedDie = rand_range(1, 20)
 	var hundredSidedDie = rand_range(1, 100)
-	if twentySidedDie <= benAgressionValue:
+	if twentySidedDie <= benAggressionValue:
 		if benLocation == "schoolroom":
 			benLocation = "backroom"
 		elif benLocation == "backroom":
@@ -79,7 +84,7 @@ func _on_DannyTimer_timeout():
 	
 	var twentySidedDie = rand_range(1, 20)
 	var hundredSidedDie = rand_range(1, 100)
-	if twentySidedDie <= dannyAgressionValue:
+	if twentySidedDie <= dannyAggressionValue:
 		if dannyLocation != "dannysroom":
 			if hundredSidedDie < 15:
 				dannyLocation = "schoolroom"
