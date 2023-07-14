@@ -10,6 +10,11 @@
 [node name="Night1" type="Node2D"]
 script = ExtResource( 6 )
 
+[node name="HourLabel" type="RichTextLabel" parent="."]
+margin_left = 1820.0
+margin_right = 1860.0
+margin_bottom = 40.0
+
 [node name="noahpanningview" type="Sprite" parent="."]
 position = Vector2( 960, 540 )
 texture = ExtResource( 1 )
