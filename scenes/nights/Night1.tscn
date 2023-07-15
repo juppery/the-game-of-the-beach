@@ -9,7 +9,7 @@
 [ext_resource path="res://Fonts/five-nights-at-freddys.otf" type="DynamicFontData" id=7]
 
 [sub_resource type="DynamicFont" id=1]
-size = 112
+size = 151
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
@@ -34,6 +34,7 @@ margin_right = -693.0
 margin_bottom = 229.0
 
 [node name="Cameras" parent="." instance=ExtResource( 5 )]
+visible = false
 
 [node name="Timers" type="Node2D" parent="."]
 
@@ -50,10 +51,10 @@ wait_time = 60.0
 autostart = true
 
 [node name="HourLabel" type="Label" parent="."]
-margin_left = 1730.0
+margin_left = 1665.0
 margin_top = 30.0
-margin_right = 1893.0
-margin_bottom = 121.0
+margin_right = 1886.0
+margin_bottom = 153.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0.25098, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
