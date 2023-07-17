@@ -6,16 +6,16 @@ export var slideSpeed = 300
 
 
 
-var windowOpen = true
+
 #makes a variable that i can change and then later convert to the position of the sprite
 var velocity = Vector2.ZERO
 
 
-func _ready():
-	pass
+#func _ready():
+#	pass
 
+var windowOpen = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):	
 	
 	
@@ -32,8 +32,8 @@ func _process(delta):
 		velocity.y = 0
 	position.y += velocity.y
 	position.y = clamp(position.y, 0, 238)
-	print("velocity ", velocity.y) #debug purposes
-	print("position ", position.y) #debug purposes
+	#print("velocity ", velocity.y) #debug purposes
+	#print("position ", position.y) #debug purposes
 func _on_close_window_button_button_down():
 	windowOpen = false
 
