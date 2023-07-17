@@ -34,7 +34,6 @@ margin_right = -693.0
 margin_bottom = 229.0
 
 [node name="Cameras" parent="." instance=ExtResource( 5 )]
-visible = false
 
 [node name="Timers" type="Node2D" parent="."]
 

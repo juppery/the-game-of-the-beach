@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jermaspritesheet.png-7147c4123e9a56745d3deb438b8e53f0.stex"
+path="res://.import/jermaspritesheet.png-d7cd5a4b6012c7e92121b7eef2575b72.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/ui images/jermaspritesheet.png"
-dest_files=[ "res://.import/jermaspritesheet.png-7147c4123e9a56745d3deb438b8e53f0.stex" ]
+source_file="res://assets/gifs/jermaspritesheet.png"
+dest_files=[ "res://.import/jermaspritesheet.png-d7cd5a4b6012c7e92121b7eef2575b72.stex" ]
 
 [params]
 
