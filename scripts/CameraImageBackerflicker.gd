@@ -9,4 +9,4 @@ func _process(delta):
 		backer.color.r = 1/glorg
 		backer.color.g = 1/glorg
 		backer.color.b = 1/glorg
-		print(backer.color)
+		
