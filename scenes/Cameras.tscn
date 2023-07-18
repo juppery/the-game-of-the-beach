@@ -946,7 +946,7 @@ script = ExtResource( 3 )
 [node name="JermaGif" type="AnimatedSprite" parent="UI Images"]
 position = Vector2( 1646, 223 )
 frames = SubResource( 171 )
-frame = 8
+frame = 30
 playing = true
 
 [node name="Camera Images" type="Node2D" parent="."]
@@ -1038,28 +1038,32 @@ scale = Vector2( 0.3, 0.3 )
 
 [node name="FakeWill" type="Sprite" parent="Camera Images/OutsideWindow"]
 
-[node name="Camera Flipper" type="Area2D" parent="."]
+[node name="Camera Activation" type="Node2D" parent="."]
+
+[node name="Camera Flipper" type="Area2D" parent="Camera Activation"]
 position = Vector2( 960, 1000 )
 
-[node name="FlipActivator" type="CollisionShape2D" parent="Camera Flipper"]
+[node name="FlipActivator" type="CollisionShape2D" parent="Camera Activation/Camera Flipper"]
 scale = Vector2( 60, 5 )
 shape = SubResource( 1 )
 
-[node name="FlipIcon" type="Sprite" parent="Camera Flipper/FlipActivator"]
+[node name="FlipIcon" type="Sprite" parent="Camera Activation"]
 modulate = Color( 1, 1, 1, 0.368627 )
-scale = Vector2( 0.206, 0.196 )
+position = Vector2( 960, 1000 )
+scale = Vector2( 12.36, 0.98 )
 texture = ExtResource( 7 )
 
-[node name="CameraFlip" type="AnimatedSprite" parent="Camera Flipper"]
-position = Vector2( 33.4999, -455.5 )
+[node name="CameraFlip" type="AnimatedSprite" parent="Camera Activation"]
+position = Vector2( 993.5, 544.5 )
 scale = Vector2( 2.28719, 1.59618 )
 frames = SubResource( 172 )
 
-[node name="ReverseCameraFlip" type="AnimatedSprite" parent="Camera Flipper"]
-position = Vector2( 33.4999, -455.5 )
+[node name="ReverseCameraFlip" type="AnimatedSprite" parent="Camera Activation"]
+position = Vector2( 993.5, 544.5 )
 scale = Vector2( 2.28719, 1.59618 )
 frames = SubResource( 172 )
 
-[connection signal="mouse_entered" from="Camera Flipper" to="." method="_on_Camera_Flipper_mouse_entered"]
-[connection signal="mouse_exited" from="Camera Flipper" to="." method="_on_Camera_Flipper_mouse_exited"]
-[connection signal="animation_finished" from="Camera Flipper/CameraFlip" to="." method="_on_CameraFlip_animation_finished"]
+[connection signal="mouse_entered" from="Camera Activation/Camera Flipper" to="." method="_on_Camera_Flipper_mouse_entered"]
+[connection signal="mouse_exited" from="Camera Activation/Camera Flipper" to="." method="_on_Camera_Flipper_mouse_exited"]
+[connection signal="animation_finished" from="Camera Activation/CameraFlip" to="." method="_on_CameraFlip_animation_finished"]
+[connection signal="animation_finished" from="Camera Activation/ReverseCameraFlip" to="." method="_on_ReverseCameraFlip_animation_finished"]
