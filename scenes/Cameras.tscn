@@ -998,7 +998,7 @@ script = ExtResource( 3 )
 [node name="JermaGif" type="AnimatedSprite" parent="Camera UI/UI Images"]
 position = Vector2( 1646, 223 )
 frames = SubResource( 171 )
-frame = 154
+frame = 75
 playing = true
 
 [node name="Camera Images" type="Node2D" parent="Camera UI"]
