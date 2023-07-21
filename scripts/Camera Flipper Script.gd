@@ -21,22 +21,28 @@ func _ready():
 	
 
 func _process(delta):
-	pass
-	
+	if camerasActive == true:
+		CameraUI.visible = true
+		pass
+	else:
+		CameraUI.visible = false
+		
 func _on_Camera_Flipper_mouse_entered():
-	print("glorg")
+	
 	if camerasActive == false:
 		#flipactivator.disabled = true
 		
+		flipgif.frame = 0
 		flipgif.visible = true
 		flipgif.play()
 		
 		
-	if camerasActive == true:
+	elif camerasActive == true:
 		
-		camerasActive = false
 		#flipactivator.disabled = true
+		camerasActive = false
 		
+		reverseflipgif.frame = 0
 		reverseflipgif.visible = true
 		reverseflipgif.play()
 		
@@ -49,9 +55,18 @@ func _on_CameraFlip_animation_finished():
 	#flipactivator.disabled = false
 	
 	flipgif.visible = false
-	CameraUI.visible = true
+	#CameraUI.visible = true
 	#the cameras are now active
 
 
 func _on_ReverseCameraFlip_animation_finished():
 	reverseflipgif.visible = false
+
+
+func _on_debug_print_timer_timeout():
+	print("vars:")
+	print("CameraUI.visible "+str(CameraUI.visible))
+	print("CameraUI.visible "+str(CameraUI.visible))
+	print("flipgif.visible "+str(flipgif.visible))
+	print("reverseflipgif.visible "+str(reverseflipgif.visible))
+	print("camerasActive "+str(camerasActive))
