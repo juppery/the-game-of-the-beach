@@ -17,16 +17,16 @@ font_data = ExtResource( 7 )
 [node name="Night1" type="Node2D"]
 script = ExtResource( 6 )
 
-[node name="noahpanningview" type="Sprite" parent="."]
+[node name="FlipView" type="Sprite" parent="."]
 position = Vector2( 960, 540 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
-[node name="window_closed_sprite" type="Sprite" parent="noahpanningview"]
+[node name="window_closed_sprite" type="Sprite" parent="FlipView"]
 texture = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="close_window_button" type="Button" parent="noahpanningview"]
+[node name="close_window_button" type="Button" parent="FlipView"]
 modulate = Color( 1, 1, 1, 0 )
 margin_left = -1193.0
 margin_top = -371.0
@@ -61,9 +61,9 @@ custom_fonts/font = SubResource( 1 )
 text = "12 AM"
 align = 2
 
-[connection signal="button_down" from="noahpanningview/close_window_button" to="noahpanningview/window_closed_sprite" method="_on_close_window_button_button_down"]
-[connection signal="button_up" from="noahpanningview/close_window_button" to="noahpanningview/window_closed_sprite" method="_on_close_window_button_button_up"]
-[connection signal="mouse_exited" from="noahpanningview/close_window_button" to="noahpanningview/window_closed_sprite" method="_on_close_window_button_mouse_exited"]
+[connection signal="button_down" from="FlipView/close_window_button" to="FlipView/window_closed_sprite" method="_on_close_window_button_button_down"]
+[connection signal="button_up" from="FlipView/close_window_button" to="FlipView/window_closed_sprite" method="_on_close_window_button_button_up"]
+[connection signal="mouse_exited" from="FlipView/close_window_button" to="FlipView/window_closed_sprite" method="_on_close_window_button_mouse_exited"]
 [connection signal="timeout" from="Timers/BenTimer" to="." method="_on_BenTimer_timeout"]
 [connection signal="timeout" from="Timers/DannyTimer" to="." method="_on_DannyTimer_timeout"]
 [connection signal="timeout" from="Timers/HourTimer" to="." method="_on_HourTimer_timeout"]

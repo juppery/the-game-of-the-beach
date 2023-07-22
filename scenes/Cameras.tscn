@@ -1,4 +1,4 @@
-[gd_scene load_steps=199 format=2]
+[gd_scene load_steps=200 format=2]
 
 [ext_resource path="res://scripts/Camera Flipper Script.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/rooms/schoolroom/schoolroomBEN.JPG" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/gifs/jermaspritesheet.png" type="Texture" id=5]
 [ext_resource path="res://assets/gifs/cameraflipsheet.png" type="Texture" id=6]
 [ext_resource path="res://assets/images/placeholders/peepopants.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/rooms/schoolroom/schoolroomEMPTY.JPG" type="Texture" id=8]
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
@@ -998,7 +999,7 @@ script = ExtResource( 3 )
 [node name="JermaGif" type="AnimatedSprite" parent="Camera UI/UI Images"]
 position = Vector2( 1646, 223 )
 frames = SubResource( 171 )
-frame = 75
+frame = 77
 playing = true
 
 [node name="Camera Images" type="Node2D" parent="Camera UI"]
@@ -1006,6 +1007,9 @@ playing = true
 [node name="Schoolroom" type="Node2D" parent="Camera UI/Camera Images"]
 
 [node name="Empty" type="Sprite" parent="Camera UI/Camera Images/Schoolroom"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 8 )
 
 [node name="Ben" type="Sprite" parent="Camera UI/Camera Images/Schoolroom"]
 position = Vector2( 638, 471 )
