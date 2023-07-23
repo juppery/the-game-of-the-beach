@@ -82,12 +82,12 @@ func _on_ReverseCameraFlip_animation_finished():
 	if mouseInActivator == false:
 		flipicon.visible = true
 
-func _on_debug_print_timer_timeout():
-	print("vars:")
-	print("CameraUI.visible "+str(CameraUI.visible))
-	print("CameraUI.visible "+str(CameraUI.visible))
-	print("flipgif.visible "+str(flipgif.visible))
-	print("reverseflipgif.visible "+str(reverseflipgif.visible))
-	print("camerasActive "+str(camerasActive))
-	print("mouseInActivator "+str(mouseInActivator))
+#func _on_debug_print_timer_timeout():
+#	print("vars:")
+#	print("CameraUI.visible "+str(CameraUI.visible))
+#	print("CameraUI.visible "+str(CameraUI.visible))
+#	print("flipgif.visible "+str(flipgif.visible))
+#	print("reverseflipgif.visible "+str(reverseflipgif.visible))
+#	print("camerasActive "+str(camerasActive))
+#	print("mouseInActivator "+str(mouseInActivator))
 	
