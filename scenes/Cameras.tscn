@@ -1029,7 +1029,7 @@ script = ExtResource( 3 )
 [node name="JermaGif" type="AnimatedSprite" parent="Camera UI/UI Images"]
 position = Vector2( 1636, 132 )
 frames = SubResource( 171 )
-frame = 127
+frame = 126
 playing = true
 
 [node name="Camera Images" type="Node2D" parent="Camera UI"]
@@ -1167,7 +1167,6 @@ action_mode = 0
 icon = ExtResource( 12 )
 
 [node name="Camera Activation" type="Node2D" parent="."]
-visible = false
 
 [node name="FlipIcon" type="Sprite" parent="Camera Activation"]
 modulate = Color( 1, 1, 1, 0.368627 )
