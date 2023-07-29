@@ -1,8 +1,162 @@
-[gd_scene load_steps=136 format=2]
+[gd_scene load_steps=166 format=2]
 
 [ext_resource path="res://Fonts/cnr.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/gifs/Static effect.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Menu.gd" type="Script" id=3]
+[ext_resource path="res://assets/gifs/ezgif-3-661be19d32.png" type="Texture" id=4]
+
+[sub_resource type="AtlasTexture" id=135]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=136]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 433, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=137]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 866, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=138]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1299, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=139]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1732, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=140]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 2165, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=141]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 2598, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=142]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 3031, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=143]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 3464, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=144]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 3897, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=145]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 4330, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=146]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 4763, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=147]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 5196, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=148]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 5629, 0, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=149]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=150]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 433, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=151]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 866, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=152]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1299, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=153]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 1732, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=154]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 2165, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=155]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 2598, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=156]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 3031, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=157]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 3464, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=158]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 3897, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=159]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 4330, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=160]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 4763, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=161]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 5196, 576, 433, 576 )
+
+[sub_resource type="AtlasTexture" id=162]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 5629, 576, 433, 576 )
+
+[sub_resource type="SpriteFrames" id=134]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 135 ), SubResource( 136 ), SubResource( 137 ), SubResource( 138 ), SubResource( 139 ), SubResource( 140 ), SubResource( 141 ), SubResource( 142 ), SubResource( 143 ), SubResource( 144 ), SubResource( 145 ), SubResource( 146 ), SubResource( 147 ), SubResource( 148 ), SubResource( 149 ), SubResource( 150 ), SubResource( 151 ), SubResource( 152 ), SubResource( 153 ), SubResource( 154 ), SubResource( 155 ), SubResource( 156 ), SubResource( 157 ), SubResource( 158 ), SubResource( 159 ), SubResource( 160 ), SubResource( 161 ), SubResource( 162 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 4
@@ -664,18 +818,25 @@ margin_right = 1921.0
 margin_bottom = 1081.0
 color = Color( 0, 0, 0, 1 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="DannyFrames" type="AnimatedSprite" parent="."]
+position = Vector2( 1454, 508.5 )
+scale = Vector2( 2.06005, 1.97396 )
+frames = SubResource( 134 )
+frame = 14
+playing = true
+
+[node name="Static" type="AnimatedSprite" parent="."]
 modulate = Color( 1, 1, 1, 0.639216 )
 position = Vector2( 964, 540.5 )
 scale = Vector2( 3.19333, 3.16864 )
 frames = SubResource( 131 )
-frame = 90
+frame = 20
 playing = true
 
 [node name="Label" type="Label" parent="."]
-margin_left = 9.0
+margin_left = 3.0
 margin_top = 6.0
-margin_right = 1929.0
+margin_right = 1923.0
 margin_bottom = 1084.0
 custom_fonts/font = SubResource( 1 )
 text = "F i v e
@@ -695,10 +856,10 @@ custom_styles/hover = SubResource( 133 )
 text = "New Game"
 
 [node name="Continue" type="Button" parent="."]
-margin_left = 67.0
-margin_top = 707.0
-margin_right = 807.0
-margin_bottom = 808.0
+margin_left = 61.0
+margin_top = 714.0
+margin_right = 801.0
+margin_bottom = 815.0
 theme = SubResource( 6 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 7 )
