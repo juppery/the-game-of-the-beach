@@ -1,8 +1,22 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
+[ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_02.Still005.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_03.Still006.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_01.Still004.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/images/control room images/opendoor.jpg" type="Texture" id=4]
 [ext_resource path="res://scenes/Cameras.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/CharacterMovement.gd" type="Script" id=6]
 [ext_resource path="res://Fonts/five-nights-at-freddys.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_04.Still007.jpg" type="Texture" id=8]
+[ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_05.Still008.jpg" type="Texture" id=9]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
 
 [sub_resource type="DynamicFont" id=1]
 size = 151
@@ -13,8 +27,17 @@ font_data = ExtResource( 7 )
 [node name="Night1" type="Node2D"]
 script = ExtResource( 6 )
 
-[node name="FlipView" type="Sprite" parent="."]
+[node name="FlipView" type="Node2D" parent="."]
 position = Vector2( 960, 540 )
+
+[node name="Door" type="Node2D" parent="FlipView"]
+
+[node name="opendoor" type="Sprite" parent="FlipView/Door"]
+texture = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="FlipView/Door"]
+frames = SubResource( 2 )
+playing = true
 
 [node name="Cameras" parent="." instance=ExtResource( 5 )]
 visible = false
