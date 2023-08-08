@@ -13,7 +13,9 @@ onready var StairsImages = get_node("Camera Images/Stairs")
 onready var BensRoomImages = get_node("Camera Images/Bens Room")
 onready var DannysRoomImages = get_node("Camera Images/Dannys Room")
 onready var OutsideImages = get_node("Camera Images/OutsideWindow")
-
+#these ones just needs to be made
+onready var CamerasRootNode = get_parent()
+onready var buttonDown = CamerasRootNode.get_node("CameraButtons/ButtonSchoolroom")
 
 
 
@@ -23,7 +25,7 @@ func _ready():
 		child.visible = false
 	
 	SchoolroomImages.visible = true
-
+	#buttonDown.pressed = true
 
 
 func _on_ButtonOutsideWindow_button_down():
