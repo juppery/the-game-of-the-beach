@@ -1,4 +1,4 @@
-[gd_scene load_steps=214 format=2]
+[gd_scene load_steps=226 format=2]
 
 [ext_resource path="res://scripts/Camera Flipper Script.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/rooms/schoolroom/schoolroomBEN.JPG" type="Texture" id=2]
@@ -18,6 +18,18 @@
 [ext_resource path="res://assets/images/camtextpics/CAM1B.png" type="Texture" id=16]
 [ext_resource path="res://assets/images/camtextpics/CAM1C.png" type="Texture" id=17]
 [ext_resource path="res://assets/images/camtextpics/CAM1D.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/rooms/bensroom/bensroomEMPTY.JPG" type="Texture" id=19]
+[ext_resource path="res://assets/images/rooms/bensroom/bensroomBEN.JPG" type="Texture" id=20]
+[ext_resource path="res://assets/images/rooms/dannysroom/dannysroomEMPTY.JPG" type="Texture" id=21]
+[ext_resource path="res://assets/images/rooms/dannysroom/dannysroomDANNY.JPG" type="Texture" id=22]
+[ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE3.JPG" type="Texture" id=23]
+[ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE2.JPG" type="Texture" id=24]
+[ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE4.JPG" type="Texture" id=25]
+[ext_resource path="res://assets/images/rooms/kitchen/kitchenDANNY.JPG" type="Texture" id=26]
+[ext_resource path="res://assets/images/rooms/kitchen/kitchenBEN.JPG" type="Texture" id=27]
+[ext_resource path="res://assets/images/rooms/kitchen/kitchenEMPTY.JPG" type="Texture" id=28]
+[ext_resource path="res://assets/images/rooms/kitchen/kitchenBENANDDANNY.JPG" type="Texture" id=29]
+[ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE1.JPG" type="Texture" id=30]
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
@@ -1012,10 +1024,8 @@ script = ExtResource( 9 )
 [node name="UI Images" type="Node2D" parent="Camera UI"]
 
 [node name="ColorRect(killer)" type="ColorRect" parent="Camera UI/UI Images"]
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 1930.0
-margin_bottom = 1090.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 mouse_filter = 2
 input_pass_on_modal_close_click = false
 color = Color( 0.376471, 0.376471, 0.376471, 1 )
@@ -1033,9 +1043,9 @@ margin_bottom = 918.0
 script = ExtResource( 3 )
 
 [node name="JermaGif" type="AnimatedSprite" parent="Camera UI/UI Images"]
-position = Vector2( 96, 975 )
+position = Vector2( 1636, 132 )
 frames = SubResource( 171 )
-frame = 106
+frame = 158
 playing = true
 
 [node name="Camera Images" type="Node2D" parent="Camera UI"]
@@ -1048,7 +1058,7 @@ scale = Vector2( 0.28, 0.28 )
 texture = ExtResource( 8 )
 
 [node name="Ben" type="Sprite" parent="Camera UI/Camera Images/Schoolroom"]
-position = Vector2( 639, 472 )
+position = Vector2( 638, 471 )
 scale = Vector2( 0.28, 0.28 )
 texture = ExtResource( 2 )
 
@@ -1077,12 +1087,24 @@ scale = Vector2( 0.3, 0.3 )
 [node name="Kitchen" type="Node2D" parent="Camera UI/Camera Images"]
 
 [node name="Empty" type="Sprite" parent="Camera UI/Camera Images/Kitchen"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 28 )
+
+[node name="BenAndDanny" type="Sprite" parent="Camera UI/Camera Images/Kitchen"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 29 )
 
 [node name="Ben" type="Sprite" parent="Camera UI/Camera Images/Kitchen"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 27 )
 
 [node name="Danny" type="Sprite" parent="Camera UI/Camera Images/Kitchen"]
-
-[node name="Nik\?animated\?" type="Sprite" parent="Camera UI/Camera Images/Kitchen"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 26 )
 
 [node name="Parents Room" type="Node2D" parent="Camera UI/Camera Images"]
 
@@ -1091,20 +1113,38 @@ scale = Vector2( 0.3, 0.3 )
 [node name="Patio" type="Node2D" parent="Camera UI/Camera Images"]
 
 [node name="Empty" type="Sprite" parent="Camera UI/Camera Images/Patio"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 19 )
 
-[node name="James" type="Sprite" parent="Camera UI/Camera Images/Patio"]
+[node name="James(missing tex)" type="Sprite" parent="Camera UI/Camera Images/Patio"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 19 )
 
 [node name="To Downstairs" type="Node2D" parent="Camera UI/Camera Images"]
 
+[node name="Jp(missing tex)" type="Sprite" parent="Camera UI/Camera Images/To Downstairs"]
+
 [node name="LucasST1" type="Sprite" parent="Camera UI/Camera Images/To Downstairs"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 30 )
 
 [node name="LucasST2" type="Sprite" parent="Camera UI/Camera Images/To Downstairs"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 24 )
 
 [node name="LucasST3" type="Sprite" parent="Camera UI/Camera Images/To Downstairs"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 23 )
 
 [node name="LucasST4" type="Sprite" parent="Camera UI/Camera Images/To Downstairs"]
-
-[node name="Jp" type="Sprite" parent="Camera UI/Camera Images/To Downstairs"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 25 )
 
 [node name="Stairs" type="Node2D" parent="Camera UI/Camera Images"]
 
@@ -1116,15 +1156,27 @@ scale = Vector2( 0.3, 0.3 )
 
 [node name="Bens Room" type="Node2D" parent="Camera UI/Camera Images"]
 
-[node name="Empty" type="Sprite" parent="Camera UI/Camera Images/Bens Room"]
-
 [node name="Ben" type="Sprite" parent="Camera UI/Camera Images/Bens Room"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 20 )
+
+[node name="Empty" type="Sprite" parent="Camera UI/Camera Images/Bens Room"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 19 )
 
 [node name="Dannys Room" type="Node2D" parent="Camera UI/Camera Images"]
 
 [node name="Empty" type="Sprite" parent="Camera UI/Camera Images/Dannys Room"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 21 )
 
 [node name="Danny" type="Sprite" parent="Camera UI/Camera Images/Dannys Room"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 22 )
 
 [node name="OutsideWindow" type="Node2D" parent="Camera UI/Camera Images"]
 
@@ -1221,13 +1273,11 @@ scale = Vector2( 12.36, 0.98 )
 texture = ExtResource( 7 )
 
 [node name="CameraFlip" type="AnimatedSprite" parent="Camera Activation"]
-visible = false
 position = Vector2( 993.5, 544.5 )
 scale = Vector2( 2.28719, 1.59618 )
 frames = SubResource( 172 )
 
 [node name="ReverseCameraFlip" type="AnimatedSprite" parent="Camera Activation"]
-visible = false
 position = Vector2( 993.5, 544.5 )
 scale = Vector2( 2.28719, 1.59618 )
 frames = SubResource( 191 )
@@ -1246,6 +1296,12 @@ autostart = true
 
 [connection signal="button_down" from="Camera UI/Camera Buttons/ButtonOutsideWindow" to="Camera UI" method="_on_ButtonOutsideWindow_button_down"]
 [connection signal="button_down" from="Camera UI/Camera Buttons/ButtonBensRoom" to="Camera UI" method="_on_ButtonBensRoom_button_down"]
+[connection signal="button_down" from="Camera UI/Camera Buttons/ButtonDannysRoom" to="Camera UI" method="_on_ButtonDannysRoom_button_down"]
+[connection signal="button_down" from="Camera UI/Camera Buttons/ButtonStairs" to="Camera UI" method="_on_ButtonStairs_button_down"]
+[connection signal="button_down" from="Camera UI/Camera Buttons/ButtonSchoolroom" to="Camera UI" method="_on_ButtonSchoolroom_button_down"]
+[connection signal="button_down" from="Camera UI/Camera Buttons/ButtonSamsRoom" to="Camera UI" method="_on_ButtonSamsRoom_button_down"]
+[connection signal="button_down" from="Camera UI/Camera Buttons/ButtonKitchen" to="Camera UI" method="_on_ButtonKitchen_button_down"]
+[connection signal="button_down" from="Camera UI/Camera Buttons/ButtonBackroom" to="Camera UI" method="_on_ButtonBackroom_button_down"]
 [connection signal="animation_finished" from="Camera Activation/CameraFlip" to="." method="_on_CameraFlip_animation_finished"]
 [connection signal="animation_finished" from="Camera Activation/ReverseCameraFlip" to="." method="_on_ReverseCameraFlip_animation_finished"]
 [connection signal="mouse_entered" from="Camera Activation/Camera Flipper" to="." method="_on_Camera_Flipper_mouse_entered"]
