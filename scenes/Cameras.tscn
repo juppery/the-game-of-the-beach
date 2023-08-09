@@ -1012,8 +1012,10 @@ script = ExtResource( 9 )
 [node name="UI Images" type="Node2D" parent="Camera UI"]
 
 [node name="ColorRect(killer)" type="ColorRect" parent="Camera UI/UI Images"]
-margin_right = 1920.0
-margin_bottom = 1080.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 1930.0
+margin_bottom = 1090.0
 mouse_filter = 2
 input_pass_on_modal_close_click = false
 color = Color( 0.376471, 0.376471, 0.376471, 1 )
@@ -1031,9 +1033,9 @@ margin_bottom = 918.0
 script = ExtResource( 3 )
 
 [node name="JermaGif" type="AnimatedSprite" parent="Camera UI/UI Images"]
-position = Vector2( 1636, 132 )
+position = Vector2( 96, 975 )
 frames = SubResource( 171 )
-frame = 27
+frame = 106
 playing = true
 
 [node name="Camera Images" type="Node2D" parent="Camera UI"]
@@ -1046,7 +1048,7 @@ scale = Vector2( 0.28, 0.28 )
 texture = ExtResource( 8 )
 
 [node name="Ben" type="Sprite" parent="Camera UI/Camera Images/Schoolroom"]
-position = Vector2( 638, 471 )
+position = Vector2( 639, 472 )
 scale = Vector2( 0.28, 0.28 )
 texture = ExtResource( 2 )
 
@@ -1219,11 +1221,13 @@ scale = Vector2( 12.36, 0.98 )
 texture = ExtResource( 7 )
 
 [node name="CameraFlip" type="AnimatedSprite" parent="Camera Activation"]
+visible = false
 position = Vector2( 993.5, 544.5 )
 scale = Vector2( 2.28719, 1.59618 )
 frames = SubResource( 172 )
 
 [node name="ReverseCameraFlip" type="AnimatedSprite" parent="Camera Activation"]
+visible = false
 position = Vector2( 993.5, 544.5 )
 scale = Vector2( 2.28719, 1.59618 )
 frames = SubResource( 191 )

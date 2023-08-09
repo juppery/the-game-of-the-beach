@@ -1,9 +1,10 @@
-[gd_scene load_steps=166 format=2]
+[gd_scene load_steps=168 format=2]
 
 [ext_resource path="res://Fonts/cnr.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/gifs/Static effect.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Menu.gd" type="Script" id=3]
 [ext_resource path="res://assets/gifs/ezgif-3-661be19d32.png" type="Texture" id=4]
+[ext_resource path="res://scripts/NewGameButton.gd" type="Script" id=5]
 
 [sub_resource type="AtlasTexture" id=135]
 flags = 4
@@ -770,11 +771,15 @@ animations = [ {
 size = 126
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=132]
+[sub_resource type="StyleBoxFlat" id=164]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=163]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="Theme" id=2]
-Button/styles/normal = SubResource( 132 )
+Button/styles/hover = SubResource( 164 )
+Button/styles/normal = SubResource( 163 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 100
@@ -822,7 +827,7 @@ color = Color( 0, 0, 0, 1 )
 position = Vector2( 1454, 508.5 )
 scale = Vector2( 2.06005, 1.97396 )
 frames = SubResource( 134 )
-frame = 14
+frame = 12
 playing = true
 
 [node name="Static" type="AnimatedSprite" parent="."]
@@ -830,7 +835,7 @@ modulate = Color( 1, 1, 1, 0.639216 )
 position = Vector2( 964, 540.5 )
 scale = Vector2( 3.19333, 3.16864 )
 frames = SubResource( 131 )
-frame = 20
+frame = 57
 playing = true
 
 [node name="Label" type="Label" parent="."]
@@ -845,32 +850,38 @@ A t   t h e
 B e a c h"
 
 [node name="New Game" type="Button" parent="."]
-margin_left = 96.0
-margin_top = 578.0
-margin_right = 784.0
-margin_bottom = 686.0
+margin_left = 200.0
+margin_top = 582.0
+margin_right = 662.0
+margin_bottom = 690.0
 theme = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
 custom_styles/hover = SubResource( 133 )
 text = "New Game"
+align = 0
+script = ExtResource( 5 )
 
 [node name="Continue" type="Button" parent="."]
-margin_left = 61.0
-margin_top = 714.0
-margin_right = 801.0
-margin_bottom = 815.0
+margin_left = 200.0
+margin_top = 722.0
+margin_right = 640.0
+margin_bottom = 823.0
 theme = SubResource( 6 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 7 )
 text = "Continue"
+align = 0
 
 [node name="Quit" type="Button" parent="."]
-margin_left = 12.0
-margin_top = 837.0
-margin_right = 660.0
-margin_bottom = 938.0
+margin_left = 200.0
+margin_top = 852.0
+margin_right = 420.0
+margin_bottom = 953.0
 theme = SubResource( 9 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 10 )
 text = "Quit"
+align = 0
+
+[connection signal="pressed" from="New Game" to="New Game" method="_on_New_Game_pressed"]

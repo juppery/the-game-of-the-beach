@@ -56,22 +56,19 @@ script = ExtResource( 11 )
 texture = ExtResource( 4 )
 
 [node name="ClosedDoor" type="Sprite" parent="FlipView/Door/States"]
-visible = false
 texture = ExtResource( 9 )
 
 [node name="Animations" type="Node2D" parent="FlipView/Door"]
-visible = false
 
 [node name="DoorCloseGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 2 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="DoorOpenGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 3 )
 
 [node name="People" type="Node2D" parent="FlipView/Door"]
-visible = false
 
 [node name="Danny" type="Sprite" parent="FlipView/Door/People"]
 modulate = Color( 1, 1, 1, 0.780392 )
