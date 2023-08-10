@@ -1,10 +1,14 @@
-[gd_scene load_steps=168 format=2]
+[gd_scene load_steps=172 format=2]
 
 [ext_resource path="res://Fonts/cnr.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://assets/gifs/Static effect.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Menu.gd" type="Script" id=3]
 [ext_resource path="res://assets/gifs/ezgif-3-661be19d32.png" type="Texture" id=4]
 [ext_resource path="res://scripts/NewGameButton.gd" type="Script" id=5]
+[ext_resource path="res://White Triangle.png" type="Texture" id=6]
+[ext_resource path="res://scripts/ContinueButton.gd" type="Script" id=7]
+[ext_resource path="res://scripts/QuitButton.gd" type="Script" id=8]
+[ext_resource path="res://assets/images/blackgradient.png" type="Texture" id=9]
 
 [sub_resource type="AtlasTexture" id=135]
 flags = 4
@@ -786,24 +790,24 @@ size = 100
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=133]
-bg_color = Color( 0.968627, 0.964706, 0.964706, 1 )
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
 expand_margin_left = 5.0
 
-[sub_resource type="StyleBoxEmpty" id=5]
+[sub_resource type="StyleBoxEmpty" id=327]
 
-[sub_resource type="Theme" id=6]
-Button/styles/normal = SubResource( 5 )
+[sub_resource type="Theme" id=328]
+Button/styles/normal = SubResource( 327 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=329]
 size = 100
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxEmpty" id=8]
+[sub_resource type="StyleBoxEmpty" id=330]
 
-[sub_resource type="Theme" id=9]
-Button/styles/normal = SubResource( 8 )
+[sub_resource type="Theme" id=331]
+Button/styles/normal = SubResource( 330 )
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=332]
 size = 100
 font_data = ExtResource( 1 )
 
@@ -827,15 +831,20 @@ color = Color( 0, 0, 0, 1 )
 position = Vector2( 1454, 508.5 )
 scale = Vector2( 2.06005, 1.97396 )
 frames = SubResource( 134 )
-frame = 12
+frame = 13
 playing = true
+
+[node name="Blackgradient" type="Sprite" parent="."]
+position = Vector2( 1488, 566 )
+scale = Vector2( 0.399021, 1.336 )
+texture = ExtResource( 9 )
 
 [node name="Static" type="AnimatedSprite" parent="."]
 modulate = Color( 1, 1, 1, 0.639216 )
 position = Vector2( 964, 540.5 )
 scale = Vector2( 3.19333, 3.16864 )
 frames = SubResource( 131 )
-frame = 57
+frame = 14
 playing = true
 
 [node name="Label" type="Label" parent="."]
@@ -854,34 +863,66 @@ margin_left = 200.0
 margin_top = 582.0
 margin_right = 662.0
 margin_bottom = 690.0
+rect_pivot_offset = Vector2( -899, -250 )
 theme = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
 custom_styles/hover = SubResource( 133 )
+custom_styles/pressed = SubResource( 133 )
 text = "New Game"
 align = 0
 script = ExtResource( 5 )
+
+[node name="HoveringTriangle" type="Sprite" parent="New Game"]
+position = Vector2( -60, 45 )
+rotation = 1.5708
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 6 )
 
 [node name="Continue" type="Button" parent="."]
 margin_left = 200.0
 margin_top = 722.0
 margin_right = 640.0
 margin_bottom = 823.0
-theme = SubResource( 6 )
+theme = SubResource( 328 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 329 )
+custom_styles/hover = SubResource( 133 )
+custom_styles/pressed = SubResource( 133 )
 text = "Continue"
 align = 0
+script = ExtResource( 7 )
+
+[node name="HoveringTriangle" type="Sprite" parent="Continue"]
+position = Vector2( -60, 45 )
+rotation = 1.5708
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 6 )
 
 [node name="Quit" type="Button" parent="."]
 margin_left = 200.0
 margin_top = 852.0
 margin_right = 420.0
 margin_bottom = 953.0
-theme = SubResource( 9 )
+theme = SubResource( 331 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 332 )
+custom_styles/hover = SubResource( 133 )
+custom_styles/pressed = SubResource( 133 )
 text = "Quit"
 align = 0
+script = ExtResource( 8 )
 
+[node name="HoveringTriangle" type="Sprite" parent="Quit"]
+position = Vector2( -60, 45 )
+rotation = 1.5708
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 6 )
+
+[connection signal="mouse_entered" from="New Game" to="New Game" method="_on_New_Game_mouse_entered"]
+[connection signal="mouse_exited" from="New Game" to="New Game" method="_on_New_Game_mouse_exited"]
 [connection signal="pressed" from="New Game" to="New Game" method="_on_New_Game_pressed"]
+[connection signal="mouse_entered" from="Continue" to="Continue" method="_on_Continue_mouse_entered"]
+[connection signal="mouse_exited" from="Continue" to="Continue" method="_on_Continue_mouse_exited"]
+[connection signal="mouse_entered" from="Quit" to="Quit" method="_on_Quit_mouse_entered"]
+[connection signal="mouse_exited" from="Quit" to="Quit" method="_on_Quit_mouse_exited"]
