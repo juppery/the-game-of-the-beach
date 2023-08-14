@@ -1,4 +1,4 @@
-[gd_scene load_steps=226 format=2]
+[gd_scene load_steps=230 format=2]
 
 [ext_resource path="res://scripts/Camera Flipper Script.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/rooms/schoolroom/schoolroomBEN.JPG" type="Texture" id=2]
@@ -30,6 +30,10 @@
 [ext_resource path="res://assets/images/rooms/kitchen/kitchenEMPTY.JPG" type="Texture" id=28]
 [ext_resource path="res://assets/images/rooms/kitchen/kitchenBENANDDANNY.JPG" type="Texture" id=29]
 [ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE1.JPG" type="Texture" id=30]
+[ext_resource path="res://assets/images/rooms/backroom/backroomDANNY.JPG" type="Texture" id=31]
+[ext_resource path="res://assets/images/rooms/backroom/backroomBENANDDANNY.JPG" type="Texture" id=32]
+[ext_resource path="res://assets/images/rooms/backroom/backroomBEN.JPG" type="Texture" id=33]
+[ext_resource path="res://assets/images/rooms/backroom/backroomEMPTY.JPG" type="Texture" id=34]
 
 [sub_resource type="AtlasTexture" id=171]
 flags = 4
@@ -1045,7 +1049,7 @@ script = ExtResource( 3 )
 [node name="JermaGif" type="AnimatedSprite" parent="Camera UI/UI Images"]
 position = Vector2( 1636, 132 )
 frames = SubResource( 326 )
-frame = 125
+frame = 137
 playing = true
 
 [node name="Camera Images" type="Node2D" parent="Camera UI"]
@@ -1071,18 +1075,32 @@ scale = Vector2( 0.3, 0.3 )
 [node name="Backroom" type="Node2D" parent="Camera UI/Camera Images"]
 
 [node name="Empty" type="Sprite" parent="Camera UI/Camera Images/Backroom"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 34 )
 
 [node name="Ben" type="Sprite" parent="Camera UI/Camera Images/Backroom"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 33 )
 
 [node name="Danny" type="Sprite" parent="Camera UI/Camera Images/Backroom"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 31 )
 
-[node name="Sams Room" type="Node2D" parent="Camera UI/Camera Images"]
+[node name="BenAndDanny" type="Sprite" parent="Camera UI/Camera Images/Backroom"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 32 )
 
-[node name="Empty" type="Sprite" parent="Camera UI/Camera Images/Sams Room"]
+[node name="Sams Room(missing)" type="Node2D" parent="Camera UI/Camera Images"]
 
-[node name="Ben" type="Sprite" parent="Camera UI/Camera Images/Sams Room"]
+[node name="Empty" type="Sprite" parent="Camera UI/Camera Images/Sams Room(missing)"]
 
-[node name="Danny" type="Sprite" parent="Camera UI/Camera Images/Sams Room"]
+[node name="Ben" type="Sprite" parent="Camera UI/Camera Images/Sams Room(missing)"]
+
+[node name="Danny" type="Sprite" parent="Camera UI/Camera Images/Sams Room(missing)"]
 
 [node name="Kitchen" type="Node2D" parent="Camera UI/Camera Images"]
 
