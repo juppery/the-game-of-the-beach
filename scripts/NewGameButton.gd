@@ -2,8 +2,8 @@ extends Button
 
 
 func _ready():
-	get_node("JermaGif").visible = false
-	get_node("JermaGif").frame = 0
+	get_node("HoveringTriangle").visible = false
+	get_node("HoveringTriangle").frame = 0
 
 
 
@@ -12,8 +12,8 @@ func _on_New_Game_pressed():
 
 
 func _on_New_Game_mouse_entered():
-	get_node("JermaGif").visible = true
+	get_node("HoveringTriangle").visible = true
 	
 
 func _on_New_Game_mouse_exited():
-	get_node("JermaGif").visible = false
+	get_node("HoveringTriangle").visible = false

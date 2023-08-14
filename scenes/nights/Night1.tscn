@@ -85,11 +85,12 @@ texture = ExtResource( 9 )
 
 [node name="DoorCloseGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 2 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="DoorOpenGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 3 )
+frame = 3
 playing = true
 
 [node name="People" type="Node2D" parent="FlipView/Door"]
