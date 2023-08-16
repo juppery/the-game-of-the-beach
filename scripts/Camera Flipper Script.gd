@@ -82,9 +82,6 @@ func _on_ReverseCameraFlip_animation_finished():
 	if mouseInActivator == false:
 		flipicon.visible = true
 
-
-
-
 #func _on_debug_print_timer_timeout():
 #	print("vars:")
 #	print("CameraUI.visible "+str(CameraUI.visible))
