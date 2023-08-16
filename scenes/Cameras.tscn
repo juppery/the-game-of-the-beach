@@ -1,9 +1,10 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://scripts/Camera Flipper Script.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/rooms/schoolroom/schoolroomBEN.JPG" type="Texture" id=2]
 [ext_resource path="res://scripts/CameraImageBackerflicker.gd" type="Script" id=3]
 [ext_resource path="res://assets/images/ui images/mapoutline.png" type="Texture" id=4]
+[ext_resource path="res://assets/gifs/Static effect.png" type="Texture" id=5]
 [ext_resource path="res://assets/gifs/cameraflipsheet.png" type="Texture" id=6]
 [ext_resource path="res://assets/images/placeholders/peepopants.png" type="Texture" id=7]
 [ext_resource path="res://assets/images/rooms/schoolroom/schoolroomEMPTY.JPG" type="Texture" id=8]
@@ -29,6 +30,94 @@
 [ext_resource path="res://assets/images/rooms/kitchen/kitchenEMPTY.JPG" type="Texture" id=28]
 [ext_resource path="res://assets/images/rooms/kitchen/kitchenBENANDDANNY.JPG" type="Texture" id=29]
 [ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE1.JPG" type="Texture" id=30]
+
+[sub_resource type="AtlasTexture" id=351]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=352]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1500, 0, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=353]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 3000, 0, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=354]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 4500, 0, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=355]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 1014, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=356]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1500, 1014, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=357]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 3000, 1014, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=358]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 4500, 1014, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=359]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 2028, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=360]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1500, 2028, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=361]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 3000, 2028, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=362]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 4500, 2028, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=363]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 3042, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=364]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1500, 3042, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=365]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 3000, 3042, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=366]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 4500, 3042, 1500, 1014 )
+
+[sub_resource type="SpriteFrames" id=367]
+animations = [ {
+"frames": [ SubResource( 351 ), SubResource( 352 ), SubResource( 353 ), SubResource( 354 ), SubResource( 355 ), SubResource( 356 ), SubResource( 357 ), SubResource( 358 ), SubResource( 359 ), SubResource( 360 ), SubResource( 361 ), SubResource( 362 ), SubResource( 363 ), SubResource( 364 ), SubResource( 365 ), SubResource( 366 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
 
 [sub_resource type="StyleBoxFlat" id=327]
 border_width_left = 5
@@ -177,12 +266,7 @@ margin_bottom = 1087.0
 rect_pivot_offset = Vector2( 1352, 1709 )
 mouse_filter = 2
 input_pass_on_modal_close_click = false
-color = Color( 0.376471, 0.376471, 0.376471, 1 )
-
-[node name="CameraMap" type="Sprite" parent="Camera UI/UI Images"]
-position = Vector2( 1584.08, 503.356 )
-scale = Vector2( 1.3, 1.90143 )
-texture = ExtResource( 4 )
+color = Color( 0.359375, 0.329895, 0.329895, 1 )
 
 [node name="CameraImageBacker" type="ColorRect" parent="Camera UI/UI Images"]
 margin_left = 50.0
@@ -190,6 +274,21 @@ margin_top = 28.0
 margin_right = 1225.0
 margin_bottom = 918.0
 script = ExtResource( 3 )
+
+[node name="CameraMap" type="Sprite" parent="Camera UI/UI Images"]
+position = Vector2( 1584.08, 691.857 )
+scale = Vector2( 1.3, 1.14743 )
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="Static effect" type="AnimatedSprite" parent="Camera UI/UI Images"]
+modulate = Color( 1, 1, 1, 0.298039 )
+position = Vector2( 964.5, 540 )
+scale = Vector2( 1.27267, 1.04734 )
+z_index = 2
+frames = SubResource( 367 )
+frame = 8
+playing = true
 
 [node name="Camera Images" type="Node2D" parent="Camera UI"]
 
@@ -317,8 +416,8 @@ scale = Vector2( 0.28, 0.28 )
 texture = ExtResource( 21 )
 
 [node name="Danny" type="Sprite" parent="Camera UI/Camera Images/Dannys Room"]
-position = Vector2( 638, 471 )
-scale = Vector2( 0.28, 0.28 )
+position = Vector2( 964, 538.5 )
+scale = Vector2( 0.475198, 0.355489 )
 texture = ExtResource( 22 )
 
 [node name="OutsideWindow" type="Node2D" parent="Camera UI/Camera Images"]
@@ -328,10 +427,10 @@ texture = ExtResource( 22 )
 [node name="Camera Buttons" type="Node2D" parent="Camera UI"]
 
 [node name="ButtonOutsideWindow" type="Button" parent="Camera UI/Camera Buttons"]
-margin_left = 1527.0
-margin_top = 156.0
-margin_right = 1592.0
-margin_bottom = 206.0
+margin_left = 1542.0
+margin_top = 377.0
+margin_right = 1607.0
+margin_bottom = 427.0
 theme = SubResource( 330 )
 toggle_mode = true
 action_mode = 0
@@ -339,59 +438,59 @@ icon = ExtResource( 11 )
 
 [node name="ButtonBensRoom" type="Button" parent="Camera UI/Camera Buttons"]
 margin_left = 1485.0
-margin_top = 304.0
+margin_top = 555.0
 margin_right = 1550.0
-margin_bottom = 354.0
+margin_bottom = 605.0
 theme = SubResource( 330 )
 toggle_mode = true
 action_mode = 0
 icon = ExtResource( 13 )
 
 [node name="ButtonDannysRoom" type="Button" parent="Camera UI/Camera Buttons"]
-margin_left = 1625.0
-margin_top = 306.0
-margin_right = 1690.0
-margin_bottom = 356.0
+margin_left = 1616.0
+margin_top = 545.0
+margin_right = 1681.0
+margin_bottom = 595.0
 theme = SubResource( 330 )
 toggle_mode = true
 action_mode = 0
 icon = ExtResource( 14 )
 
 [node name="ButtonStairs" type="Button" parent="Camera UI/Camera Buttons"]
-margin_left = 1551.0
-margin_top = 391.0
-margin_right = 1616.0
-margin_bottom = 441.0
+margin_left = 1548.0
+margin_top = 603.0
+margin_right = 1613.0
+margin_bottom = 653.0
 theme = SubResource( 330 )
 toggle_mode = true
 action_mode = 0
 icon = ExtResource( 12 )
 
 [node name="ButtonSchoolroom" type="Button" parent="Camera UI/Camera Buttons"]
-margin_left = 1369.0
-margin_top = 836.0
-margin_right = 1434.0
-margin_bottom = 886.0
+margin_left = 1381.0
+margin_top = 867.0
+margin_right = 1446.0
+margin_bottom = 917.0
 theme = SubResource( 330 )
 toggle_mode = true
 action_mode = 0
 icon = ExtResource( 15 )
 
 [node name="ButtonSamsRoom" type="Button" parent="Camera UI/Camera Buttons"]
-margin_left = 1454.0
-margin_top = 786.0
-margin_right = 1519.0
-margin_bottom = 836.0
+margin_left = 1448.0
+margin_top = 817.0
+margin_right = 1513.0
+margin_bottom = 867.0
 theme = SubResource( 330 )
 toggle_mode = true
 action_mode = 0
 icon = ExtResource( 18 )
 
 [node name="ButtonKitchen" type="Button" parent="Camera UI/Camera Buttons"]
-margin_left = 1536.0
-margin_top = 825.0
-margin_right = 1601.0
-margin_bottom = 875.0
+margin_left = 1548.0
+margin_top = 865.0
+margin_right = 1613.0
+margin_bottom = 915.0
 rect_pivot_offset = Vector2( 9, 25 )
 theme = SubResource( 330 )
 toggle_mode = true
@@ -399,10 +498,10 @@ action_mode = 0
 icon = ExtResource( 17 )
 
 [node name="ButtonParentsBedroom" type="Button" parent="Camera UI/Camera Buttons"]
-margin_left = 1767.0
-margin_top = 835.0
-margin_right = 1832.0
-margin_bottom = 885.0
+margin_left = 1742.0
+margin_top = 814.0
+margin_right = 1807.0
+margin_bottom = 864.0
 rect_pivot_offset = Vector2( 9, 25 )
 theme = SubResource( 330 )
 toggle_mode = true
@@ -411,9 +510,9 @@ icon = ExtResource( 17 )
 
 [node name="ButtonPatio" type="Button" parent="Camera UI/Camera Buttons"]
 margin_left = 1745.0
-margin_top = 561.0
+margin_top = 675.0
 margin_right = 1810.0
-margin_bottom = 611.0
+margin_bottom = 725.0
 rect_pivot_offset = Vector2( 9, 25 )
 theme = SubResource( 330 )
 toggle_mode = true
@@ -421,10 +520,10 @@ action_mode = 0
 icon = ExtResource( 17 )
 
 [node name="ButtonBackroom" type="Button" parent="Camera UI/Camera Buttons"]
-margin_left = 1456.0
-margin_top = 469.0
-margin_right = 1521.0
-margin_bottom = 519.0
+margin_left = 1450.0
+margin_top = 675.0
+margin_right = 1515.0
+margin_bottom = 725.0
 theme = SubResource( 330 )
 toggle_mode = true
 action_mode = 0

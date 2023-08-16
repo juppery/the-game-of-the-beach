@@ -132,13 +132,12 @@ texture = ExtResource( 17 )
 [node name="WindowOpening" type="AnimatedSprite" parent="FlipView/Window/Animations"]
 scale = Vector2( 0.48, 0.36 )
 frames = SubResource( 4 )
-frame = 2
 playing = true
 
 [node name="WindowClosing" type="AnimatedSprite" parent="FlipView/Window/Animations"]
 scale = Vector2( 0.48, 0.36 )
 frames = SubResource( 5 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="ViewControl" type="Node2D" parent="FlipView"]
