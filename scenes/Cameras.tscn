@@ -191,15 +191,6 @@ margin_right = 1225.0
 margin_bottom = 918.0
 script = ExtResource( 3 )
 
-<<<<<<< HEAD
-=======
-[node name="JermaGif" type="AnimatedSprite" parent="Camera UI/UI Images"]
-position = Vector2( 1636, 132 )
-frames = SubResource( 326 )
-frame = 137
-playing = true
-
->>>>>>> parent of 47a1963 (added some things i think)
 [node name="Camera Images" type="Node2D" parent="Camera UI"]
 
 [node name="Schoolroom" type="Node2D" parent="Camera UI/Camera Images"]
