@@ -85,20 +85,12 @@ texture = ExtResource( 9 )
 
 [node name="DoorCloseGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 2 )
-<<<<<<< HEAD
 frame = 1
-=======
-frame = 2
->>>>>>> parent of 47a1963 (added some things i think)
 playing = true
 
 [node name="DoorOpenGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 3 )
-<<<<<<< HEAD
 frame = 3
-=======
-frame = 4
->>>>>>> parent of 47a1963 (added some things i think)
 playing = true
 
 [node name="People" type="Node2D" parent="FlipView/Door"]
@@ -164,20 +156,6 @@ position = Vector2( 870, 0 )
 scale = Vector2( 5, 50 )
 shape = SubResource( 6 )
 
-<<<<<<< HEAD
-=======
-[node name="Sprite" type="Sprite" parent="FlipView/ViewControl/RightFlipBox"]
-modulate = Color( 1, 1, 1, 0.392157 )
-scale = Vector2( 1, 10.5 )
-texture = ExtResource( 21 )
-
-[node name="Gifs" type="Node2D" parent="FlipView/ViewControl"]
-
-[node name="showertowindow" type="AnimatedSprite" parent="FlipView/ViewControl/Gifs"]
-frames = SubResource( 7 )
-frame = 44
-
->>>>>>> parent of 47a1963 (added some things i think)
 [node name="Cameras" parent="." instance=ExtResource( 5 )]
 
 [node name="Timers" type="Node2D" parent="."]
