@@ -119,13 +119,13 @@ animations = [ {
 "speed": 30.0
 } ]
 
-[sub_resource type="StyleBoxFlat" id=327]
+[sub_resource type="StyleBoxFlat" id=368]
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 
-[sub_resource type="StyleBoxFlat" id=328]
+[sub_resource type="StyleBoxFlat" id=369]
 bg_color = Color( 1, 0, 0, 1 )
 border_width_left = 5
 border_width_top = 5
@@ -133,14 +133,14 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="DynamicFont" id=329]
+[sub_resource type="DynamicFont" id=370]
 font_data = ExtResource( 10 )
 
 [sub_resource type="Theme" id=330]
-default_font = SubResource( 329 )
-Button/styles/hover = SubResource( 327 )
-Button/styles/normal = SubResource( 327 )
-Button/styles/pressed = SubResource( 328 )
+default_font = SubResource( 370 )
+Button/styles/hover = SubResource( 368 )
+Button/styles/normal = SubResource( 368 )
+Button/styles/pressed = SubResource( 369 )
 
 [sub_resource type="AtlasTexture" id=331]
 flags = 4
@@ -287,6 +287,7 @@ position = Vector2( 964.5, 540 )
 scale = Vector2( 1.27267, 1.04734 )
 z_index = 2
 frames = SubResource( 367 )
+frame = 6
 playing = true
 
 [node name="Camera Images" type="Node2D" parent="Camera UI"]

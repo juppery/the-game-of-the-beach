@@ -1,10 +1,10 @@
-[gd_scene load_steps=90 format=2]
+[gd_scene load_steps=160 format=2]
 
 [ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_02.Still005.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_03.Still006.jpg" type="Texture" id=2]
 [ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_01.Still004.jpg" type="Texture" id=3]
 [ext_resource path="res://assets/images/control room images/opendoor.jpg" type="Texture" id=4]
-[ext_resource path="res://scenes/Cameras.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/gifs/Static effect.png" type="Texture" id=5]
 [ext_resource path="res://scripts/CharacterMovement.gd" type="Script" id=6]
 [ext_resource path="res://Fonts/five-nights-at-freddys.otf" type="DynamicFontData" id=7]
 [ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_04.Still007.jpg" type="Texture" id=8]
@@ -81,6 +81,34 @@
 [ext_resource path="res://assets/gifs/showertowindow/showertowindow01.png" type="Texture" id=79]
 [ext_resource path="res://assets/gifs/showertowindow/showertowindow02.png" type="Texture" id=80]
 [ext_resource path="res://assets/gifs/showertowindow/showertowindow03.png" type="Texture" id=81]
+[ext_resource path="res://scripts/Camera Flipper Script.gd" type="Script" id=82]
+[ext_resource path="res://scripts/CameraImageBackerflicker.gd" type="Script" id=83]
+[ext_resource path="res://assets/images/camtextpics/CAM2D.png" type="Texture" id=84]
+[ext_resource path="res://assets/images/camtextpics/CAM2C.png" type="Texture" id=85]
+[ext_resource path="res://assets/images/camtextpics/CAM1C.png" type="Texture" id=86]
+[ext_resource path="res://assets/images/camtextpics/CAM1D.png" type="Texture" id=87]
+[ext_resource path="res://assets/images/camtextpics/CAM2B.png" type="Texture" id=88]
+[ext_resource path="res://assets/images/camtextpics/CAM2A.png" type="Texture" id=89]
+[ext_resource path="res://assets/images/camtextpics/CAM1A.png" type="Texture" id=90]
+[ext_resource path="res://assets/images/camtextpics/CAM1B.png" type="Texture" id=91]
+[ext_resource path="res://assets/images/rooms/schoolroom/schoolroomBEN.JPG" type="Texture" id=92]
+[ext_resource path="res://assets/gifs/cameraflipsheet.png" type="Texture" id=93]
+[ext_resource path="res://assets/images/placeholders/peepopants.png" type="Texture" id=94]
+[ext_resource path="res://assets/images/rooms/schoolroom/schoolroomEMPTY.JPG" type="Texture" id=95]
+[ext_resource path="res://assets/images/ui images/mapoutline.png" type="Texture" id=96]
+[ext_resource path="res://assets/images/rooms/bensroom/bensroomEMPTY.JPG" type="Texture" id=97]
+[ext_resource path="res://assets/images/rooms/kitchen/kitchenDANNY.JPG" type="Texture" id=98]
+[ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE4.JPG" type="Texture" id=99]
+[ext_resource path="res://assets/images/rooms/kitchen/kitchenBEN.JPG" type="Texture" id=100]
+[ext_resource path="res://assets/images/rooms/dannysroom/dannysroomEMPTY.JPG" type="Texture" id=101]
+[ext_resource path="res://assets/images/rooms/kitchen/kitchenBENANDDANNY.JPG" type="Texture" id=102]
+[ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE1.JPG" type="Texture" id=103]
+[ext_resource path="res://assets/images/rooms/kitchen/kitchenEMPTY.JPG" type="Texture" id=104]
+[ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE2.JPG" type="Texture" id=105]
+[ext_resource path="res://assets/images/rooms/dannysroom/dannysroomDANNY.JPG" type="Texture" id=106]
+[ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE3.JPG" type="Texture" id=107]
+[ext_resource path="res://assets/images/rooms/bensroom/bensroomBEN.JPG" type="Texture" id=108]
+[ext_resource path="res://scripts/Camera Control.gd" type="Script" id=109]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -138,6 +166,225 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 7 )
 
+[sub_resource type="AtlasTexture" id=351]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=352]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1500, 0, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=353]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 3000, 0, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=354]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 4500, 0, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=355]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 1014, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=356]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1500, 1014, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=357]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 3000, 1014, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=358]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 4500, 1014, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=359]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 2028, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=360]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1500, 2028, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=361]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 3000, 2028, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=362]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 4500, 2028, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=363]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 3042, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=364]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 1500, 3042, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=365]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 3000, 3042, 1500, 1014 )
+
+[sub_resource type="AtlasTexture" id=366]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 4500, 3042, 1500, 1014 )
+
+[sub_resource type="SpriteFrames" id=367]
+animations = [ {
+"frames": [ SubResource( 351 ), SubResource( 352 ), SubResource( 353 ), SubResource( 354 ), SubResource( 355 ), SubResource( 356 ), SubResource( 357 ), SubResource( 358 ), SubResource( 359 ), SubResource( 360 ), SubResource( 361 ), SubResource( 362 ), SubResource( 363 ), SubResource( 364 ), SubResource( 365 ), SubResource( 366 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=327]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id=328]
+bg_color = Color( 1, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=329]
+font_data = ExtResource( 7 )
+
+[sub_resource type="Theme" id=368]
+default_font = SubResource( 329 )
+Button/styles/hover = SubResource( 327 )
+Button/styles/normal = SubResource( 327 )
+Button/styles/pressed = SubResource( 328 )
+
+[sub_resource type="AtlasTexture" id=331]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 0, 0, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=332]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 874, 0, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=333]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 1748, 0, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=334]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 2622, 0, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=335]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 3496, 0, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=336]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 0, 681, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=337]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 874, 681, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=338]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 1748, 681, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=339]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 2622, 681, 874, 681 )
+
+[sub_resource type="SpriteFrames" id=369]
+animations = [ {
+"frames": [ SubResource( 331 ), SubResource( 332 ), SubResource( 333 ), SubResource( 334 ), SubResource( 335 ), SubResource( 336 ), SubResource( 337 ), SubResource( 338 ), SubResource( 339 ) ],
+"loop": false,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="AtlasTexture" id=341]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 2622, 681, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=342]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 3496, 681, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=343]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 0, 1362, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=344]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 874, 1362, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=345]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 1748, 1362, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=346]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 2622, 1362, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=347]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 3496, 1362, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=348]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 0, 2043, 874, 681 )
+
+[sub_resource type="AtlasTexture" id=349]
+flags = 4
+atlas = ExtResource( 93 )
+region = Rect2( 874, 2043, 874, 681 )
+
+[sub_resource type="SpriteFrames" id=370]
+animations = [ {
+"frames": [ SubResource( 341 ), SubResource( 342 ), SubResource( 343 ), SubResource( 344 ), SubResource( 345 ), SubResource( 346 ), SubResource( 347 ), SubResource( 348 ), SubResource( 349 ) ],
+"loop": false,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=371]
+
 [node name="Night1" type="Node2D"]
 script = ExtResource( 6 )
 __meta__ = {
@@ -162,12 +409,12 @@ texture = ExtResource( 9 )
 
 [node name="DoorCloseGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 2 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="DoorOpenGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 3 )
-frame = 3
+frame = 4
 playing = true
 
 [node name="People" type="Node2D" parent="FlipView/Door"]
@@ -253,13 +500,8 @@ frames = SubResource( 7 )
 speed_scale = 1.5
 
 [node name="windowtoshower" type="AnimatedSprite" parent="FlipView/ViewControl/Gifs"]
-z_index = 3
 frames = SubResource( 8 )
-frame = 50
 speed_scale = 1.5
-playing = true
-
-[node name="Cameras" parent="." instance=ExtResource( 5 )]
 
 [node name="Timers" type="Node2D" parent="."]
 
@@ -287,6 +529,315 @@ custom_fonts/font = SubResource( 1 )
 text = "12 AM"
 align = 2
 
+[node name="Cameras" type="Node2D" parent="."]
+script = ExtResource( 82 )
+
+[node name="Camera UI" type="Node2D" parent="Cameras"]
+script = ExtResource( 109 )
+
+[node name="UI Images" type="Node2D" parent="Cameras/Camera UI"]
+
+[node name="ColorRect(killer)" type="ColorRect" parent="Cameras/Camera UI/UI Images"]
+margin_left = 2.0
+margin_top = 7.0
+margin_right = 1922.0
+margin_bottom = 1087.0
+rect_pivot_offset = Vector2( 1352, 1709 )
+mouse_filter = 2
+input_pass_on_modal_close_click = false
+color = Color( 0.359375, 0.329895, 0.329895, 1 )
+
+[node name="CameraImageBacker" type="ColorRect" parent="Cameras/Camera UI/UI Images"]
+margin_left = 50.0
+margin_top = 28.0
+margin_right = 1225.0
+margin_bottom = 918.0
+script = ExtResource( 83 )
+
+[node name="CameraMap" type="Sprite" parent="Cameras/Camera UI/UI Images"]
+position = Vector2( 1584.08, 691.857 )
+scale = Vector2( 1.3, 1.14743 )
+z_index = 1
+texture = ExtResource( 96 )
+
+[node name="Static effect" type="AnimatedSprite" parent="Cameras/Camera UI/UI Images"]
+modulate = Color( 1, 1, 1, 0.298039 )
+position = Vector2( 964.5, 540 )
+scale = Vector2( 1.27267, 1.04734 )
+z_index = 2
+frames = SubResource( 367 )
+frame = 12
+playing = true
+
+[node name="Camera Images" type="Node2D" parent="Cameras/Camera UI"]
+
+[node name="Schoolroom" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+
+[node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Schoolroom"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 95 )
+
+[node name="Ben" type="Sprite" parent="Cameras/Camera UI/Camera Images/Schoolroom"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 92 )
+
+[node name="Danny" type="Sprite" parent="Cameras/Camera UI/Camera Images/Schoolroom"]
+position = Vector2( 700, 540 )
+scale = Vector2( 0.3, 0.3 )
+
+[node name="BenAndDanny" type="Sprite" parent="Cameras/Camera UI/Camera Images/Schoolroom"]
+
+[node name="Backroom" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+
+[node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Backroom"]
+
+[node name="Ben" type="Sprite" parent="Cameras/Camera UI/Camera Images/Backroom"]
+
+[node name="Danny" type="Sprite" parent="Cameras/Camera UI/Camera Images/Backroom"]
+
+[node name="Sams Room" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+
+[node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Sams Room"]
+
+[node name="Ben" type="Sprite" parent="Cameras/Camera UI/Camera Images/Sams Room"]
+
+[node name="Danny" type="Sprite" parent="Cameras/Camera UI/Camera Images/Sams Room"]
+
+[node name="Kitchen" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+
+[node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Kitchen"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 104 )
+
+[node name="BenAndDanny" type="Sprite" parent="Cameras/Camera UI/Camera Images/Kitchen"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 102 )
+
+[node name="Ben" type="Sprite" parent="Cameras/Camera UI/Camera Images/Kitchen"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 100 )
+
+[node name="Danny" type="Sprite" parent="Cameras/Camera UI/Camera Images/Kitchen"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 98 )
+
+[node name="Parents Room" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+
+[node name="no view lol" type="Sprite" parent="Cameras/Camera UI/Camera Images/Parents Room"]
+
+[node name="Patio" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+
+[node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Patio"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 97 )
+
+[node name="James(missing tex)" type="Sprite" parent="Cameras/Camera UI/Camera Images/Patio"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 97 )
+
+[node name="To Downstairs" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+
+[node name="Jp(missing tex)" type="Sprite" parent="Cameras/Camera UI/Camera Images/To Downstairs"]
+
+[node name="LucasST1" type="Sprite" parent="Cameras/Camera UI/Camera Images/To Downstairs"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 103 )
+
+[node name="LucasST2" type="Sprite" parent="Cameras/Camera UI/Camera Images/To Downstairs"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 105 )
+
+[node name="LucasST3" type="Sprite" parent="Cameras/Camera UI/Camera Images/To Downstairs"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 107 )
+
+[node name="LucasST4" type="Sprite" parent="Cameras/Camera UI/Camera Images/To Downstairs"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 99 )
+
+[node name="Stairs" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+
+[node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Stairs"]
+
+[node name="Ben" type="Sprite" parent="Cameras/Camera UI/Camera Images/Stairs"]
+
+[node name="Danny" type="Sprite" parent="Cameras/Camera UI/Camera Images/Stairs"]
+
+[node name="Bens Room" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+
+[node name="Ben" type="Sprite" parent="Cameras/Camera UI/Camera Images/Bens Room"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 108 )
+
+[node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Bens Room"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 97 )
+
+[node name="Dannys Room" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+
+[node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Dannys Room"]
+position = Vector2( 638, 471 )
+scale = Vector2( 0.28, 0.28 )
+texture = ExtResource( 101 )
+
+[node name="Danny" type="Sprite" parent="Cameras/Camera UI/Camera Images/Dannys Room"]
+position = Vector2( 964, 538.5 )
+scale = Vector2( 0.475198, 0.355489 )
+texture = ExtResource( 106 )
+
+[node name="OutsideWindow" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+
+[node name="FakeWill" type="Sprite" parent="Cameras/Camera UI/Camera Images/OutsideWindow"]
+
+[node name="Camera Buttons" type="Node2D" parent="Cameras/Camera UI"]
+
+[node name="ButtonOutsideWindow" type="Button" parent="Cameras/Camera UI/Camera Buttons"]
+margin_left = 1542.0
+margin_top = 377.0
+margin_right = 1607.0
+margin_bottom = 427.0
+theme = SubResource( 368 )
+toggle_mode = true
+action_mode = 0
+icon = ExtResource( 89 )
+
+[node name="ButtonBensRoom" type="Button" parent="Cameras/Camera UI/Camera Buttons"]
+margin_left = 1485.0
+margin_top = 555.0
+margin_right = 1550.0
+margin_bottom = 605.0
+theme = SubResource( 368 )
+toggle_mode = true
+action_mode = 0
+icon = ExtResource( 88 )
+
+[node name="ButtonDannysRoom" type="Button" parent="Cameras/Camera UI/Camera Buttons"]
+margin_left = 1616.0
+margin_top = 545.0
+margin_right = 1681.0
+margin_bottom = 595.0
+theme = SubResource( 368 )
+toggle_mode = true
+action_mode = 0
+icon = ExtResource( 85 )
+
+[node name="ButtonStairs" type="Button" parent="Cameras/Camera UI/Camera Buttons"]
+margin_left = 1548.0
+margin_top = 603.0
+margin_right = 1613.0
+margin_bottom = 653.0
+theme = SubResource( 368 )
+toggle_mode = true
+action_mode = 0
+icon = ExtResource( 84 )
+
+[node name="ButtonSchoolroom" type="Button" parent="Cameras/Camera UI/Camera Buttons"]
+margin_left = 1381.0
+margin_top = 867.0
+margin_right = 1446.0
+margin_bottom = 917.0
+theme = SubResource( 368 )
+toggle_mode = true
+action_mode = 0
+icon = ExtResource( 90 )
+
+[node name="ButtonSamsRoom" type="Button" parent="Cameras/Camera UI/Camera Buttons"]
+margin_left = 1448.0
+margin_top = 817.0
+margin_right = 1513.0
+margin_bottom = 867.0
+theme = SubResource( 368 )
+toggle_mode = true
+action_mode = 0
+icon = ExtResource( 87 )
+
+[node name="ButtonKitchen" type="Button" parent="Cameras/Camera UI/Camera Buttons"]
+margin_left = 1548.0
+margin_top = 865.0
+margin_right = 1613.0
+margin_bottom = 915.0
+rect_pivot_offset = Vector2( 9, 25 )
+theme = SubResource( 368 )
+toggle_mode = true
+action_mode = 0
+icon = ExtResource( 86 )
+
+[node name="ButtonParentsBedroom" type="Button" parent="Cameras/Camera UI/Camera Buttons"]
+margin_left = 1742.0
+margin_top = 814.0
+margin_right = 1807.0
+margin_bottom = 864.0
+rect_pivot_offset = Vector2( 9, 25 )
+theme = SubResource( 368 )
+toggle_mode = true
+action_mode = 0
+icon = ExtResource( 86 )
+
+[node name="ButtonPatio" type="Button" parent="Cameras/Camera UI/Camera Buttons"]
+margin_left = 1745.0
+margin_top = 675.0
+margin_right = 1810.0
+margin_bottom = 725.0
+rect_pivot_offset = Vector2( 9, 25 )
+theme = SubResource( 368 )
+toggle_mode = true
+action_mode = 0
+icon = ExtResource( 86 )
+
+[node name="ButtonBackroom" type="Button" parent="Cameras/Camera UI/Camera Buttons"]
+margin_left = 1450.0
+margin_top = 675.0
+margin_right = 1515.0
+margin_bottom = 725.0
+theme = SubResource( 368 )
+toggle_mode = true
+action_mode = 0
+icon = ExtResource( 91 )
+
+[node name="Camera Activation" type="Node2D" parent="Cameras"]
+
+[node name="FlipIcon" type="Sprite" parent="Cameras/Camera Activation"]
+modulate = Color( 1, 1, 1, 0.368627 )
+position = Vector2( 960, 1000 )
+scale = Vector2( 12.36, 0.98 )
+texture = ExtResource( 94 )
+
+[node name="CameraFlip" type="AnimatedSprite" parent="Cameras/Camera Activation"]
+position = Vector2( 993.5, 544.5 )
+scale = Vector2( 2.28719, 1.59618 )
+frames = SubResource( 369 )
+
+[node name="ReverseCameraFlip" type="AnimatedSprite" parent="Cameras/Camera Activation"]
+position = Vector2( 993.5, 544.5 )
+scale = Vector2( 2.28719, 1.59618 )
+frames = SubResource( 370 )
+
+[node name="Camera Flipper" type="Area2D" parent="Cameras/Camera Activation"]
+position = Vector2( 960, 1000 )
+z_as_relative = false
+
+[node name="FlipActivator" type="CollisionShape2D" parent="Cameras/Camera Activation/Camera Flipper"]
+scale = Vector2( 60, 5 )
+shape = SubResource( 371 )
+
+[node name="debug print timer" type="Timer" parent="Cameras"]
+wait_time = 0.1
+autostart = true
+
 [connection signal="area_entered" from="FlipView/ViewControl/LeftFlipBox" to="FlipView" method="_on_LeftFlipBox_area_entered"]
 [connection signal="mouse_entered" from="FlipView/ViewControl/LeftFlipBox" to="FlipView" method="_on_LeftFlipBox_mouse_entered"]
 [connection signal="area_entered" from="FlipView/ViewControl/RightFlipBox" to="FlipView" method="_on_RightFlipBox_area_entered"]
@@ -295,3 +846,17 @@ align = 2
 [connection signal="timeout" from="Timers/BenTimer" to="." method="_on_BenTimer_timeout"]
 [connection signal="timeout" from="Timers/DannyTimer" to="." method="_on_DannyTimer_timeout"]
 [connection signal="timeout" from="Timers/HourTimer" to="." method="_on_HourTimer_timeout"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonOutsideWindow" to="Cameras/Camera UI" method="_on_ButtonOutsideWindow_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonBensRoom" to="Cameras/Camera UI" method="_on_ButtonBensRoom_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonDannysRoom" to="Cameras/Camera UI" method="_on_ButtonDannysRoom_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonStairs" to="Cameras/Camera UI" method="_on_ButtonStairs_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonSchoolroom" to="Cameras/Camera UI" method="_on_ButtonSchoolroom_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonSamsRoom" to="Cameras/Camera UI" method="_on_ButtonSamsRoom_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonKitchen" to="Cameras/Camera UI" method="_on_ButtonKitchen_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonParentsBedroom" to="Cameras/Camera UI" method="_on_ButtonKitchen_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonPatio" to="Cameras/Camera UI" method="_on_ButtonKitchen_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonBackroom" to="Cameras/Camera UI" method="_on_ButtonBackroom_button_down"]
+[connection signal="animation_finished" from="Cameras/Camera Activation/CameraFlip" to="Cameras" method="_on_CameraFlip_animation_finished"]
+[connection signal="animation_finished" from="Cameras/Camera Activation/ReverseCameraFlip" to="Cameras" method="_on_ReverseCameraFlip_animation_finished"]
+[connection signal="mouse_entered" from="Cameras/Camera Activation/Camera Flipper" to="Cameras" method="_on_Camera_Flipper_mouse_entered"]
+[connection signal="mouse_exited" from="Cameras/Camera Activation/Camera Flipper" to="Cameras" method="_on_Camera_Flipper_mouse_exited"]
