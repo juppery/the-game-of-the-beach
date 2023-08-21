@@ -831,7 +831,7 @@ color = Color( 0, 0, 0, 1 )
 position = Vector2( 1440.5, 664.5 )
 scale = Vector2( 2.1224, 1.43229 )
 frames = SubResource( 134 )
-frame = 20
+frame = 15
 playing = true
 
 [node name="Blackgradient" type="Sprite" parent="."]
@@ -844,7 +844,7 @@ modulate = Color( 1, 1, 1, 0.639216 )
 position = Vector2( 964, 540.5 )
 scale = Vector2( 3.19333, 3.16864 )
 frames = SubResource( 131 )
-frame = 102
+frame = 28
 playing = true
 
 [node name="Label" type="Label" parent="."]

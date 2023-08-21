@@ -1,5 +1,11 @@
 extends Node2D
 
+#need these to make them disappear
+onready var RightFlipBox = get_node("FlipView/ViewControl/RightFlipBox")
+onready var LeftFlipBox = get_node("FlipView/ViewControl/LeftFlipBox")
+
+
+
 onready var windowscript = get_node("noahpanningview/window_closed_sprite")
 #onready var doorscript = getnode (node with the doorscript)
 
@@ -18,8 +24,11 @@ onready var hour = 0
 #	print("ben loc: "+benLocation)
 
 
-
-
+func _process(delta):
+	#handles making tingss disappear when other things are visible
+	if get_node("Cameras").camerasActive == true:
+		RightFlipBox.visible = false
+		LeftFlipBox.visible = false
 func _on_HourTimer_timeout():
 	if hour == 0:
 		HourLabel.text = "1 AM"
@@ -104,7 +113,6 @@ func _on_DannyTimer_timeout():
 #			elif doorscript.doorOpen == false:
 #				dannyLocation = "kitchen" #we can change this
 	print("danny loc: "+dannyLocation)
-
 
 
 

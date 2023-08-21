@@ -3,6 +3,7 @@ onready var DoorNode = get_node("Door")
 onready var ShowerNode = get_node("Shower")
 onready var WindowNode = get_node("Window")
 onready var RightFlipBox = get_node("ViewControl/RightFlipBox")
+onready var LeftFlipBox = get_node("ViewControl/LeftFlipBox")
 onready var GifNode = get_node("ViewControl/Gifs")
 onready var ShowerToWindowGif = get_node("ViewControl/Gifs/showertowindow")
 
@@ -16,7 +17,6 @@ func _process(delta):
 		RightFlipBox.visible = true
 	else:
 		RightFlipBox.visible = false
-		
 
 func _ready():
 	DoorNode.visible = false
@@ -41,6 +41,7 @@ func _on_showertowindow_animation_finished():
 	ShowerNode.visible = false
 	WindowNode.visible = true
 	ShowerToWindowGif.visible = false
+
 
 
 
