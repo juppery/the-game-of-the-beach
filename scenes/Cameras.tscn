@@ -287,7 +287,6 @@ position = Vector2( 964.5, 540 )
 scale = Vector2( 1.27267, 1.04734 )
 z_index = 2
 frames = SubResource( 367 )
-frame = 8
 playing = true
 
 [node name="Camera Images" type="Node2D" parent="Camera UI"]
@@ -530,7 +529,6 @@ action_mode = 0
 icon = ExtResource( 16 )
 
 [node name="Camera Activation" type="Node2D" parent="."]
-visible = false
 
 [node name="FlipIcon" type="Sprite" parent="Camera Activation"]
 modulate = Color( 1, 1, 1, 0.368627 )
