@@ -142,7 +142,7 @@ func _ready():
 		child.visible = false
 	
 	SchoolroomImages.visible = true
-	SchoolroomButton.pressed = true
+	#SchoolroomButton.pressed = true
 
 
 func _on_ButtonOutsideWindow_button_down():
