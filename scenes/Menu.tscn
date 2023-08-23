@@ -814,10 +814,6 @@ font_data = ExtResource( 1 )
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -3.0
-margin_top = -1.0
-margin_right = -3.0
-margin_bottom = -1.0
 script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -831,7 +827,7 @@ color = Color( 0, 0, 0, 1 )
 position = Vector2( 1440.5, 664.5 )
 scale = Vector2( 2.1224, 1.43229 )
 frames = SubResource( 134 )
-frame = 15
+frame = 12
 playing = true
 
 [node name="Blackgradient" type="Sprite" parent="."]
@@ -844,7 +840,7 @@ modulate = Color( 1, 1, 1, 0.639216 )
 position = Vector2( 964, 540.5 )
 scale = Vector2( 3.19333, 3.16864 )
 frames = SubResource( 131 )
-frame = 28
+frame = 73
 playing = true
 
 [node name="Label" type="Label" parent="."]

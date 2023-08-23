@@ -409,11 +409,11 @@ texture = ExtResource( 9 )
 
 [node name="DoorCloseGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 2 )
-frame = 3
 playing = true
 
 [node name="DoorOpenGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="People" type="Node2D" parent="FlipView/Door"]
@@ -455,12 +455,12 @@ texture = ExtResource( 17 )
 [node name="WindowOpening" type="AnimatedSprite" parent="FlipView/Window/Animations"]
 scale = Vector2( 0.48, 0.36 )
 frames = SubResource( 4 )
+frame = 1
 playing = true
 
 [node name="WindowClosing" type="AnimatedSprite" parent="FlipView/Window/Animations"]
 scale = Vector2( 0.48, 0.36 )
 frames = SubResource( 5 )
-frame = 3
 playing = true
 
 [node name="ViewControl" type="Node2D" parent="FlipView"]
@@ -844,15 +844,24 @@ autostart = true
 [connection signal="timeout" from="Timers/BenTimer" to="." method="_on_BenTimer_timeout"]
 [connection signal="timeout" from="Timers/DannyTimer" to="." method="_on_DannyTimer_timeout"]
 [connection signal="timeout" from="Timers/HourTimer" to="." method="_on_HourTimer_timeout"]
-[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonOutsideWindow" to="Cameras/Camera UI" method="_on_ButtonOutsideWindow_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonOutsideWindow" to="." method="_on_ButtonOutsideWindow_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonBensRoom" to="." method="_on_ButtonBensRoom_button_down"]
 [connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonBensRoom" to="Cameras/Camera UI" method="_on_ButtonBensRoom_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonDannysRoom" to="." method="_on_ButtonDannysRoom_button_down"]
 [connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonDannysRoom" to="Cameras/Camera UI" method="_on_ButtonDannysRoom_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonStairs" to="." method="_on_ButtonStairs_button_down"]
 [connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonStairs" to="Cameras/Camera UI" method="_on_ButtonStairs_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonSchoolroom" to="." method="_on_ButtonSchoolroom_button_down"]
 [connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonSchoolroom" to="Cameras/Camera UI" method="_on_ButtonSchoolroom_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonSamsRoom" to="." method="_on_ButtonSamsRoom_button_down"]
 [connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonSamsRoom" to="Cameras/Camera UI" method="_on_ButtonSamsRoom_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonKitchen" to="." method="_on_ButtonKitchen_button_down"]
 [connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonKitchen" to="Cameras/Camera UI" method="_on_ButtonKitchen_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonParentsBedroom" to="." method="_on_ButtonParentsBedroom_button_down"]
 [connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonParentsBedroom" to="Cameras/Camera UI" method="_on_ButtonKitchen_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonPatio" to="." method="_on_ButtonPatio_button_down"]
 [connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonPatio" to="Cameras/Camera UI" method="_on_ButtonKitchen_button_down"]
+[connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonBackroom" to="." method="_on_ButtonBackroom_button_down"]
 [connection signal="button_down" from="Cameras/Camera UI/Camera Buttons/ButtonBackroom" to="Cameras/Camera UI" method="_on_ButtonBackroom_button_down"]
 [connection signal="animation_finished" from="Cameras/Camera Activation/CameraFlip" to="Cameras" method="_on_CameraFlip_animation_finished"]
 [connection signal="animation_finished" from="Cameras/Camera Activation/ReverseCameraFlip" to="Cameras" method="_on_ReverseCameraFlip_animation_finished"]
