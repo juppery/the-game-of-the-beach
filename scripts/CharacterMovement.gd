@@ -117,22 +117,22 @@ func _on_DannyTimer_timeout():
 ####CAMERA CONTROLLING-----------------------------------------------------------
 
 
-onready var CameraImages = get_node("Camera Images")
+onready var CameraImages = get_node("Cameras/Camera UI/Camera Images")
 #singular rooms
-onready var SchoolroomImages = get_node("Camera Images/Schoolroom")
-onready var BackroomImages = get_node("Camera Images/Backroom")
-onready var SamsRoomImages = get_node("Camera Images/Sams Room")
-onready var KitchenImages = get_node("Camera Images/Kitchen")
-onready var ParentsRoomImages = get_node("Camera Images/Parents Room")
-onready var PatioImages = get_node("Camera Images/Patio")
-onready var DownstairsImages = get_node("Camera Images/To Downstairs")
-onready var StairsImages = get_node("Camera Images/Stairs")
-onready var BensRoomImages = get_node("Camera Images/Bens Room")
-onready var DannysRoomImages = get_node("Camera Images/Dannys Room")
-onready var OutsideImages = get_node("Camera Images/OutsideWindow")
+onready var SchoolroomImages = get_node("Cameras/Camera UI/Camera Images/Schoolroom")
+onready var BackroomImages = get_node("Cameras/Camera UI/Camera Images/Backroom")
+onready var SamsRoomImages = get_node("Cameras/Camera UI/Camera Images/Sams Room")
+onready var KitchenImages = get_node("Cameras/Camera UI/Camera Images/Kitchen")
+onready var ParentsRoomImages = get_node("Cameras/Camera UI/Camera Images/Parents Room")
+onready var PatioImages = get_node("Cameras/Camera UI/Camera Images/Patio")
+onready var DownstairsImages = get_node("Cameras/Camera UI/Camera Images/To Downstairs")
+onready var StairsImages = get_node("Cameras/Camera UI/Camera Images/Stairs")
+onready var BensRoomImages = get_node("Cameras/Camera UI/Camera Images/Bens Room")
+onready var DannysRoomImages = get_node("Cameras/Camera UI/Camera Images/Dannys Room")
+onready var OutsideImages = get_node("Cameras/Camera UI/Camera Images/OutsideWindow")
 #these ones just needs to be made
-onready var CamerasRootNode = get_parent()
-onready var buttonDown = CamerasRootNode.get_node("CameraButtons/ButtonSchoolroom")
+onready var Cameras = get_node("Cameras")
+onready var SchoolroomButton = get_node("Cameras/Camera UI/CameraButtons/ButtonSchoolroom")
 
 
 
@@ -142,7 +142,7 @@ func _ready():
 		child.visible = false
 	
 	SchoolroomImages.visible = true
-	#buttonDown.pressed = true
+	SchoolroomButton.pressed = true
 
 
 func _on_ButtonOutsideWindow_button_down():

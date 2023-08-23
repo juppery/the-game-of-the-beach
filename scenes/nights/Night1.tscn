@@ -1,4 +1,4 @@
-[gd_scene load_steps=160 format=2]
+[gd_scene load_steps=159 format=2]
 
 [ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_02.Still005.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_03.Still006.jpg" type="Texture" id=2]
@@ -108,7 +108,6 @@
 [ext_resource path="res://assets/images/rooms/dannysroom/dannysroomDANNY.JPG" type="Texture" id=106]
 [ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE3.JPG" type="Texture" id=107]
 [ext_resource path="res://assets/images/rooms/bensroom/bensroomBEN.JPG" type="Texture" id=108]
-[ext_resource path="res://scripts/Camera Control.gd" type="Script" id=109]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -409,11 +408,12 @@ texture = ExtResource( 9 )
 
 [node name="DoorCloseGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 2 )
+frame = 4
 playing = true
 
 [node name="DoorOpenGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="People" type="Node2D" parent="FlipView/Door"]
@@ -531,7 +531,6 @@ align = 2
 script = ExtResource( 82 )
 
 [node name="Camera UI" type="Node2D" parent="Cameras"]
-script = ExtResource( 109 )
 
 [node name="UI Images" type="Node2D" parent="Cameras/Camera UI"]
 
@@ -564,7 +563,6 @@ position = Vector2( 964.5, 540 )
 scale = Vector2( 1.27267, 1.04734 )
 z_index = 2
 frames = SubResource( 367 )
-frame = 13
 playing = true
 
 [node name="Camera Images" type="Node2D" parent="Cameras/Camera UI"]
