@@ -1,4 +1,4 @@
-[gd_scene load_steps=159 format=2]
+[gd_scene load_steps=161 format=2]
 
 [ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_02.Still005.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/gifs/doormovementframes/blakc.00_00_00_03.Still006.jpg" type="Texture" id=2]
@@ -108,6 +108,7 @@
 [ext_resource path="res://assets/images/rooms/dannysroom/dannysroomDANNY.JPG" type="Texture" id=106]
 [ext_resource path="res://assets/images/rooms/lucas/lucasSTAGE3.JPG" type="Texture" id=107]
 [ext_resource path="res://assets/images/rooms/bensroom/bensroomBEN.JPG" type="Texture" id=108]
+[ext_resource path="res://assets/images/rooms/patio/patioEMPTY.JPG" type="Texture" id=109]
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -254,7 +255,7 @@ animations = [ {
 } ]
 
 [sub_resource type="StyleBoxFlat" id=327]
-border_width_left = 5
+border_width_left = 10
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
@@ -275,6 +276,10 @@ default_font = SubResource( 329 )
 Button/styles/hover = SubResource( 327 )
 Button/styles/normal = SubResource( 327 )
 Button/styles/pressed = SubResource( 328 )
+
+[sub_resource type="Theme" id=372]
+ProgressBar/colors/font_color = Color( 0.941176, 0.941176, 0.941176, 0 )
+ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 0 )
 
 [sub_resource type="AtlasTexture" id=331]
 flags = 4
@@ -391,6 +396,7 @@ __meta__ = {
 }
 
 [node name="FlipView" type="Node2D" parent="."]
+visible = false
 position = Vector2( 960, 540 )
 script = ExtResource( 11 )
 
@@ -408,11 +414,12 @@ texture = ExtResource( 9 )
 
 [node name="DoorCloseGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 2 )
+frame = 4
 playing = true
 
 [node name="DoorOpenGif" type="AnimatedSprite" parent="FlipView/Door/Animations"]
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="People" type="Node2D" parent="FlipView/Door"]
@@ -454,12 +461,13 @@ texture = ExtResource( 17 )
 [node name="WindowOpening" type="AnimatedSprite" parent="FlipView/Window/Animations"]
 scale = Vector2( 0.48, 0.36 )
 frames = SubResource( 4 )
+frame = 2
 playing = true
 
 [node name="WindowClosing" type="AnimatedSprite" parent="FlipView/Window/Animations"]
 scale = Vector2( 0.48, 0.36 )
 frames = SubResource( 5 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="ViewControl" type="Node2D" parent="FlipView"]
@@ -501,6 +509,7 @@ frames = SubResource( 8 )
 speed_scale = 1.5
 
 [node name="Timers" type="Node2D" parent="."]
+visible = false
 
 [node name="BenTimer" type="Timer" parent="Timers"]
 wait_time = 4.98
@@ -532,6 +541,7 @@ script = ExtResource( 82 )
 [node name="Camera UI" type="Node2D" parent="Cameras"]
 
 [node name="UI Images" type="Node2D" parent="Cameras/Camera UI"]
+visible = false
 
 [node name="ColorRect(killer)" type="ColorRect" parent="Cameras/Camera UI/UI Images"]
 margin_left = 2.0
@@ -562,12 +572,13 @@ position = Vector2( 964.5, 540 )
 scale = Vector2( 1.27267, 1.04734 )
 z_index = 2
 frames = SubResource( 367 )
-frame = 15
+frame = 11
 playing = true
 
 [node name="Camera Images" type="Node2D" parent="Cameras/Camera UI"]
 
 [node name="Schoolroom" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+visible = false
 
 [node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Schoolroom"]
 position = Vector2( 962, 533.5 )
@@ -588,6 +599,7 @@ position = Vector2( 962, 533.5 )
 scale = Vector2( 0.482143, 0.355489 )
 
 [node name="Backroom" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+visible = false
 
 [node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Backroom"]
 position = Vector2( 962, 533.5 )
@@ -602,6 +614,7 @@ position = Vector2( 962, 533.5 )
 scale = Vector2( 0.482143, 0.355489 )
 
 [node name="Sams Room" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+visible = false
 
 [node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Sams Room"]
 position = Vector2( 962, 533.5 )
@@ -616,6 +629,7 @@ position = Vector2( 962, 533.5 )
 scale = Vector2( 0.482143, 0.355489 )
 
 [node name="Kitchen" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+visible = false
 
 [node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Kitchen"]
 position = Vector2( 962, 533.5 )
@@ -638,6 +652,7 @@ scale = Vector2( 0.482143, 0.355489 )
 texture = ExtResource( 98 )
 
 [node name="Parents Room" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+visible = false
 
 [node name="no view lol" type="Sprite" parent="Cameras/Camera UI/Camera Images/Parents Room"]
 position = Vector2( 962, 533.5 )
@@ -648,14 +663,33 @@ scale = Vector2( 0.482143, 0.355489 )
 [node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Patio"]
 position = Vector2( 962, 533.5 )
 scale = Vector2( 0.482143, 0.355489 )
-texture = ExtResource( 97 )
+texture = ExtResource( 109 )
+
+[node name="Button" type="Button" parent="Cameras/Camera UI/Camera Images/Patio/Empty"]
+margin_left = -1404.0
+margin_top = 879.0
+margin_right = -645.0
+margin_bottom = 1271.0
+theme = SubResource( 368 )
+
+[node name="ProgressBar" type="ProgressBar" parent="Cameras/Camera UI/Camera Images/Patio/Empty/Button"]
+modulate = Color( 1, 1, 1, 0 )
+light_mask = 0
+margin_left = -99.7032
+margin_top = 436.09
+margin_right = 846.297
+margin_bottom = 602.09
+theme = SubResource( 372 )
+percent_visible = false
 
 [node name="James(missing tex)" type="Sprite" parent="Cameras/Camera UI/Camera Images/Patio"]
+visible = false
 position = Vector2( 962, 533.5 )
 scale = Vector2( 0.482143, 0.355489 )
 texture = ExtResource( 97 )
 
 [node name="To Downstairs" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+visible = false
 
 [node name="Jp(missing tex)" type="Sprite" parent="Cameras/Camera UI/Camera Images/To Downstairs"]
 position = Vector2( 962, 533.5 )
@@ -682,6 +716,7 @@ scale = Vector2( 0.482143, 0.355489 )
 texture = ExtResource( 99 )
 
 [node name="Stairs" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+visible = false
 
 [node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Stairs"]
 position = Vector2( 962, 533.5 )
@@ -696,6 +731,7 @@ position = Vector2( 962, 533.5 )
 scale = Vector2( 0.482143, 0.355489 )
 
 [node name="Bens Room" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+visible = false
 
 [node name="Ben" type="Sprite" parent="Cameras/Camera UI/Camera Images/Bens Room"]
 position = Vector2( 962, 533.5 )
@@ -708,6 +744,7 @@ scale = Vector2( 0.482143, 0.355489 )
 texture = ExtResource( 97 )
 
 [node name="Dannys Room" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+visible = false
 
 [node name="Empty" type="Sprite" parent="Cameras/Camera UI/Camera Images/Dannys Room"]
 position = Vector2( 962, 533.5 )
@@ -720,6 +757,7 @@ scale = Vector2( 0.482143, 0.355489 )
 texture = ExtResource( 106 )
 
 [node name="OutsideWindow" type="Node2D" parent="Cameras/Camera UI/Camera Images"]
+visible = false
 
 [node name="FakeWill" type="Sprite" parent="Cameras/Camera UI/Camera Images/OutsideWindow"]
 position = Vector2( 962, 533.5 )
@@ -831,6 +869,7 @@ action_mode = 0
 icon = ExtResource( 91 )
 
 [node name="Camera Activation" type="Node2D" parent="Cameras"]
+visible = false
 
 [node name="FlipIcon" type="Sprite" parent="Cameras/Camera Activation"]
 modulate = Color( 1, 1, 1, 0.368627 )
